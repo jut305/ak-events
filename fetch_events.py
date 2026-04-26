@@ -46,7 +46,11 @@ CATEGORIES OF INTEREST:
 - Live outdoor music: concerts, festivals, outdoor venues
 - Food events: festivals, farmers markets with special events, tastings,
   pop-ups, restaurant weeks
-- Photography: workshops, gallery openings, photo walks, aurora events
+- Photography (specifically): photo workshops, photography gallery
+  openings, photo walks, aurora photography events
+- Arts and culture: theater, dance, gallery openings (non-photo),
+  museum exhibitions, visual art shows, literary readings, film
+  screenings, comedy
 - Hiking: organized hikes, trail events, guided outings
 - Major significant events: anything notable that draws crowds —
   cultural festivals, fairs, civic events, fundraisers of scale
@@ -91,7 +95,7 @@ no markdown code fences. Each event must match this schema exactly:
   "end": "ISO 8601 datetime or null if unknown",
   "allDay": boolean,
   "location": "string — venue name, city",
-  "category": "one of: fitness | music | food | photography | hiking | major",
+  "category": "one of: fitness | music | food | photography | arts | hiking | major",
   "description": "string — 1-2 sentences, factual, no marketing language",
   "sourceUrl": "string — direct link to event page, not the homepage",
   "sourceName": "string — name of the source, e.g. 'Visit Anchorage'",
@@ -270,7 +274,7 @@ def validate_event(ev: dict) -> bool:
     required = ("title", "start", "category", "sourceUrl")
     if not all(ev.get(k) for k in required):
         return False
-    if ev["category"] not in {"fitness", "music", "food", "photography", "hiking", "major"}:
+    if ev["category"] not in {"fitness", "music", "food", "photography", "arts", "hiking", "major"}:
         return False
     if parse_event_start(ev) is None:
         return False

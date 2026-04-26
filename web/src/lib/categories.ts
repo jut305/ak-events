@@ -5,6 +5,7 @@ export const CATEGORY_ORDER: Category[] = [
   "music",
   "food",
   "hiking",
+  "arts",
   "photography",
   "major",
 ];
@@ -32,6 +33,11 @@ export const CATEGORY_META: Record<
     label: "Hiking",
     color: "var(--color-cat-hiking)",
     soft: "rgba(63, 94, 79, 0.12)",
+  },
+  arts: {
+    label: "Arts",
+    color: "var(--color-cat-arts)",
+    soft: "rgba(74, 110, 108, 0.12)",
   },
   photography: {
     label: "Photography",

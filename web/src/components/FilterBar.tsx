@@ -60,7 +60,7 @@ export function FilterBar({
   return (
     <div className="px-5 pb-4 space-y-2">
       <GroupLabel>when</GroupLabel>
-      <div className="scroll-x flex gap-1.5 -mx-5 pl-5 pr-6">
+      <div className="flex flex-wrap gap-1.5">
         {(Object.keys(RANGE_LABELS) as TimeRange[]).map((r) => (
           <Chip
             key={r}
@@ -75,7 +75,7 @@ export function FilterBar({
       <div className="pt-2">
         <GroupLabel>what</GroupLabel>
       </div>
-      <div className="scroll-x flex gap-1.5 -mx-5 pl-5 pr-6">
+      <div className="flex flex-wrap gap-1.5">
         <Chip selected={allCategoriesActive} onClick={onClearCategories}>
           All
         </Chip>
@@ -92,7 +92,7 @@ export function FilterBar({
       </div>
 
       {fitnessActive && (
-        <div className="scroll-x flex gap-1.5 -mx-5 pl-5 pr-6 pt-0.5">
+        <div className="flex flex-wrap gap-1.5 pt-0.5">
           <Chip selected={allSubsActive} onClick={onClearSubs}>
             All fitness
           </Chip>
@@ -111,7 +111,7 @@ export function FilterBar({
       <div className="pt-2">
         <GroupLabel>audience</GroupLabel>
       </div>
-      <div className="flex gap-1.5">
+      <div className="flex flex-wrap gap-1.5">
         <Chip
           selected={family}
           onClick={() => onFamilyChange(!family)}

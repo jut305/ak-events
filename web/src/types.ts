@@ -3,6 +3,7 @@ export type Category =
   | "music"
   | "food"
   | "photography"
+  | "arts"
   | "hiking"
   | "major";
 
