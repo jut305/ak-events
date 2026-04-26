@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets — API key lives here locally; GitHub Actions reads from secrets
+.env
+.env.local
+
+# macOS
+.DS_Store
+
+# Node (for the React site, added in Step C)
+node_modules/
+dist/
+.vite/
