@@ -70,7 +70,7 @@ export function EventDialog({ event, onClose }: EventDialogProps) {
         </button>
       </div>
 
-      <div className="p-5 pt-4 overflow-y-auto flex-1 min-h-0 space-y-4">
+      <div className="p-5 pt-4 overflow-y-auto space-y-4">
         <div className="text-[0.875rem] text-ink-soft tabular-nums">
           {formatEventDateLine(event.startDate, event.endDate, event.allDay)}
         </div>

@@ -110,8 +110,8 @@ dialog {
 }
 
 dialog[open] {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   animation: sheet-up 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
