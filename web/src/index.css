@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@theme {
+  /* Outdoor brand palette — warm neutrals + earthen accents */
+  --color-paper: #f8f4ec;
+  --color-surface: #fffdf8;
+  --color-ink: #1f1b16;
+  --color-ink-soft: #5a5246;
+  --color-ink-muted: #8a8175;
+  --color-line: #e8e1d2;
+  --color-line-strong: #d8cfbc;
+  --color-spruce: #2d4a3e;
+  --color-spruce-soft: #e6ecde;
+  --color-rust: #b85c38;
+
+  /* Category colors */
+  --color-cat-fitness: #b85c38;
+  --color-cat-music: #2d4a6b;
+  --color-cat-food: #b8862b;
+  --color-cat-hiking: #3f5e4f;
+  --color-cat-photography: #6b5b73;
+  --color-cat-major: #8b3a4c;
+
+  --font-sans: "Inter var", "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", "Apple Garamond", "Baskerville",
+    "Times New Roman", Georgia, serif;
+
+  --radius-card: 0.625rem;
+
+  --shadow-card: 0 1px 2px rgba(31, 27, 22, 0.04),
+    0 1px 1px rgba(31, 27, 22, 0.02);
+  --shadow-pop: 0 12px 32px rgba(31, 27, 22, 0.18),
+    0 2px 6px rgba(31, 27, 22, 0.08);
+}
+
+html {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100dvh;
+  /* Subtle paper texture: warm noise overlay barely perceptible */
+  background-image:
+    radial-gradient(rgba(31, 27, 22, 0.025) 1px, transparent 1px);
+  background-size: 4px 4px;
+  background-position: 0 0;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "ss01", "ss02";
+}
+
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-feature-settings: "ss01", "ss02";
+}
+
+/* Editorial rule */
+.rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-line-strong) 20%,
+    var(--color-line-strong) 80%,
+    transparent
+  );
+}
+
+/* Native dialog as bottom sheet on mobile, centered modal on desktop */
+dialog::backdrop {
+  background: rgba(31, 27, 22, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+dialog {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border: none;
+  padding: 0;
+  margin: 0 auto auto;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 1.25rem 1.25rem 0 0;
+  box-shadow: var(--shadow-pop);
+  max-height: 90dvh;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  dialog {
+    margin: auto;
+    max-width: 32rem;
+    border-radius: 1rem;
+    max-height: 80dvh;
+  }
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  animation: sheet-up 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+/* Smooth scroll on chip rows */
+.scroll-x {
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+.scroll-x::-webkit-scrollbar {
+  display: none;
+}
+
+/* Buttons reset that play nicely with our chip styles */
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-spruce);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

@@ -94,7 +94,8 @@ no markdown code fences. Each event must match this schema exactly:
   "category": "one of: fitness | music | food | photography | hiking | major",
   "description": "string — 1-2 sentences, factual, no marketing language",
   "sourceUrl": "string — direct link to event page, not the homepage",
-  "sourceName": "string — name of the source, e.g. 'Visit Anchorage'"
+  "sourceName": "string — name of the source, e.g. 'Visit Anchorage'",
+  "familyFriendly": "boolean — true if explicitly welcoming to children/families (kids' events, all-ages festivals, family hikes, community markets); false for 21+/adults-only events; default false if uncertain"
 }}
 
 QUALITY RULES:
