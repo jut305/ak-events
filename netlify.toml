@@ -12,7 +12,9 @@
   command = "npm run build"
   publish = "web/dist"
 
-  # Build only when something the site actually depends on changes.
-  # Returns 0 (skip) only if there are no changes in web/ or events.json
-  # since the last successful deploy. Otherwise builds.
-  ignore  = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- web/ events.json"
+  # Always build. The default behaviour skips builds when the base
+  # directory hasn't changed, which is wrong for this repo because
+  # events.json lives in the root and is imported at build time.
+  # `false` exits 1, which Netlify interprets as "do not skip".
+  # Build minutes are cheap (free tier is 300/month, each build ~30s).
+  ignore  = "false"
