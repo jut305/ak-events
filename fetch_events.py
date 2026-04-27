@@ -96,6 +96,13 @@ State Park events, Kenai Mountains-Turnagain Arm National Heritage Area.
 Eagle River specifically: Eagle River Nature Center events, Eagle River
 Lions Club, Chugiak-Eagle River Chamber of Commerce, Birchwood events.
 
+Girdwood specifically: Alyeska Resort calendar
+(alyeskaresort.com/calendar/) is a high-value source — they host
+notable seasonal events (Mama Bear Brunch, Blueberry Festival,
+Oktoberfest, Climbathon, Kentucky Derby watch parties, Cinco de Mayo
+at aBar, trivia and live music nights). Also check Girdwood Inc and
+Chair 5.
+
 Kenai Peninsula: Kenai/Soldotna/Homer/Seward/Cooper Landing chamber
 sites, Kenai Peninsula Borough events, Kachemak Bay Conservation Society.
 
