@@ -10,7 +10,9 @@
 [build]
   base    = "web"
   command = "npm run build"
-  publish = "web/dist"
+  # Relative to `base`, NOT to the repo root (Netlify's toml syntax
+  # differs from the UI here — UI uses repo-root paths).
+  publish = "dist"
 
   # Always build. The default behaviour skips builds when the base
   # directory hasn't changed, which is wrong for this repo because
