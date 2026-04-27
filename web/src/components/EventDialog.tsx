@@ -3,7 +3,7 @@ import { CalendarPlus, ExternalLink, MapPin, X } from "lucide-react";
 import type { AppEvent } from "../types";
 import { CATEGORY_META } from "../lib/categories";
 import { formatEventDateLine } from "../lib/dates";
-import { downloadIcs } from "../lib/ics";
+import { buildGoogleCalendarUrl } from "../lib/ics";
 
 interface EventDialogProps {
   event: AppEvent | null;
@@ -95,9 +95,10 @@ export function EventDialog({ event, onClose }: EventDialogProps) {
         className="p-4 pt-3 border-t border-line flex flex-col gap-2 sm:flex-row sm:gap-2"
         style={{ backgroundColor: "rgba(248, 244, 236, 0.6)" }}
       >
-        <button
-          type="button"
-          onClick={() => downloadIcs(event)}
+        <a
+          href={buildGoogleCalendarUrl(event)}
+          target="_blank"
+          rel="noreferrer noopener"
           className="flex-1 inline-flex items-center justify-center gap-2 h-11 rounded-lg font-medium text-[0.9375rem] transition-all"
           style={{
             backgroundColor: "#2d4a3e",
@@ -107,7 +108,7 @@ export function EventDialog({ event, onClose }: EventDialogProps) {
         >
           <CalendarPlus size={16} />
           Add to calendar
-        </button>
+        </a>
         <a
           href={event.sourceUrl}
           target="_blank"
