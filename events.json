@@ -1,5 +1,47 @@
 [
   {
+    "title": "Jeron Joseph: Sacred Ground — Photography Exhibition (ongoing)",
+    "start": "2026-03-06T00:00:00-08:00",
+    "end": "2026-10-04T23:59:00-08:00",
+    "allDay": true,
+    "location": "Anchorage Museum, 625 C St, Anchorage",
+    "category": "photography",
+    "description": "Photographer Jeron Joseph's documentary images honor and showcase the beauty of western coastal Alaska through seasonal changes and plant life in his home community of Kwigillingok.",
+    "sourceUrl": "https://www.anchoragemuseum.org/exhibitions/upcoming-exhibitions/",
+    "sourceName": "Anchorage Museum",
+    "familyFriendly": true,
+    "id": "b1fdb4d5eb78",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Drag Me to the Movies: Wicked! — Bear Tooth Theatrepub",
+    "start": "2026-04-27T00:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Bear Tooth Theatrepub, 1230 W 27th Ave, Anchorage",
+    "category": "arts",
+    "description": "Local drag artists present a screening of the film Wicked with surprise performances throughout the movie in this ongoing series at Bear Tooth Theatrepub.",
+    "sourceUrl": "https://www.beartoothak.com/live-events",
+    "sourceName": "Bear Tooth Theatrepub",
+    "familyFriendly": false,
+    "id": "3f36748c4b22",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Side Stories (Last Podcast on the Left Live)",
+    "start": "2026-04-27T00:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Bear Tooth Theatrepub, 1230 W 27th Ave, Anchorage",
+    "category": "arts",
+    "description": "Live show from the creators of Last Podcast on the Left, presenting 'Side Stories' — a deep-dive into true crime news and paranormal happenings, live at Bear Tooth Theatrepub.",
+    "sourceUrl": "https://www.beartoothak.com/live-events",
+    "sourceName": "Bear Tooth Theatrepub",
+    "familyFriendly": false,
+    "id": "5a4180fe3bdf",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
     "title": "Make it Monday Forum – Anchorage Assembly Annual Report",
     "start": "2026-04-27T08:00:00-08:00",
     "end": "2026-04-27T09:30:00-08:00",
@@ -11,7 +53,77 @@
     "sourceName": "Anchorage Chamber of Commerce",
     "familyFriendly": false,
     "id": "54cd6c7cbeb5",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Teacher Tales — 3rd Annual Storytelling Event",
+    "start": "2026-04-28T00:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Alaska Center for the Performing Arts, 621 W 6th Ave, Anchorage",
+    "category": "arts",
+    "description": "Third annual storytelling event presented by Teacher Tales and the NAACP Anchorage, supported by the Rasmuson Foundation; seven educators share stories from the heart about learning, with local musician performances throughout the evening.",
+    "sourceUrl": "https://www.beartoothak.com/live-events",
+    "sourceName": "Bear Tooth Theatrepub",
+    "familyFriendly": true,
+    "id": "d328e6c7596a",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Everyday Anchorage: Duke Russell & Ward Wells — Exhibition Opening",
+    "start": "2026-05-01T00:00:00-08:00",
+    "end": "2027-02-14T23:59:00-08:00",
+    "allDay": true,
+    "location": "Anchorage Museum, 625 C St, Anchorage",
+    "category": "photography",
+    "description": "New exhibition exploring daily life in Anchorage through the vivid paintings of Duke Russell and the documentary photographs of Ward Wells, opening May 1 for a year-long run.",
+    "sourceUrl": "https://www.anchoragemuseum.org/exhibitions/upcoming-exhibitions/",
+    "sourceName": "Anchorage Museum",
+    "familyFriendly": true,
+    "id": "faccd6aa135c",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Michaela Goade: Song of the Seasons — Exhibition Opening",
+    "start": "2026-05-01T00:00:00-08:00",
+    "end": "2027-04-30T23:59:00-08:00",
+    "allDay": true,
+    "location": "Anchorage Museum, 625 C St, Anchorage",
+    "category": "arts",
+    "description": "New exhibition celebrating Alaska's seasons through the images, sketches, and process videos of Tlingit and Norwegian illustrator Michaela Goade, opening May 1.",
+    "sourceUrl": "https://www.anchoragemuseum.org/exhibitions/upcoming-exhibitions/",
+    "sourceName": "Anchorage Museum",
+    "familyFriendly": true,
+    "id": "0f89d5a41921",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "AK Grown: Childhood in Alaska — Exhibition Opening",
+    "start": "2026-05-01T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Anchorage Museum, 625 C St, Anchorage",
+    "category": "photography",
+    "description": "Exhibition tracing nearly a century of childhood in Alaska through photographs from the 1930s to the present, showing how the state's youngest residents view their world.",
+    "sourceUrl": "https://www.anchorage.net/blog/post/discover-whats-new-in-anchorage/",
+    "sourceName": "Visit Anchorage",
+    "familyFriendly": true,
+    "id": "49b7142a9d68",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Nicole McTrusty Art Exhibition at Kenai Cultural Center",
+    "start": "2026-05-01T00:00:00-08:00",
+    "end": "2026-05-31T23:59:00-08:00",
+    "allDay": true,
+    "location": "Kenai Cultural Center, Kenai",
+    "category": "arts",
+    "description": "Month-long featured artist exhibition showcasing the work of Nicole McTrusty at the Kenai Chamber's Cultural Center, part of their ongoing artist series.",
+    "sourceUrl": "https://www.kenaipeninsulahistoricalassociation.org/events",
+    "sourceName": "Kenai Peninsula Historical Association",
+    "familyFriendly": true,
+    "id": "930ce2de078f",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "First Friday Art Walk",
@@ -26,7 +138,21 @@
     "sourceName": "Alaska.org",
     "familyFriendly": true,
     "id": "bebadb7c5b5e",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "39th Annual Kenai Peninsula Sport, Rec & Trade Show",
+    "start": "2026-05-01T18:00:00-08:00",
+    "end": "2026-05-03T17:00:00-08:00",
+    "allDay": false,
+    "location": "Soldotna Field House, 538 Arena Ave, Soldotna",
+    "category": "major",
+    "description": "Three-day outdoor sports and recreation trade show featuring 100+ vendors, fishing trip bookings, Alaskan-made products, a youth fish pond, archery, mechanical bull, food court, and giveaways. Opening night Friday includes food, beer, and wine with entry.",
+    "sourceUrl": "https://www.kenaisportshow.com/",
+    "sourceName": "Kenai Peninsula Sport Rec & Trade Show",
+    "familyFriendly": true,
+    "id": "b73a30a6117d",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Yonder Mountain String Band",
@@ -40,7 +166,7 @@
     "sourceName": "AllEvents.in",
     "familyFriendly": true,
     "id": "2b78c79e0387",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "New Grass Roots",
@@ -54,7 +180,21 @@
     "sourceName": "CenterTix",
     "familyFriendly": true,
     "id": "9f34a293e54d",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Anchorage Citywide Spring Cleanup",
+    "start": "2026-05-02T00:00:00-08:00",
+    "end": "2026-05-31T23:59:00-08:00",
+    "allDay": true,
+    "location": "Citywide, Anchorage",
+    "category": "major",
+    "description": "Month-long community cleanup campaign organized by the Anchorage Chamber of Commerce; residents and businesses pick up post-winter litter across neighborhoods, parks, and trails using free orange bags. Dozens of pop-up organized cleanups happen throughout May.",
+    "sourceUrl": "https://business.anchoragechamber.org/events/details/2026-citywide-cleanup-14753",
+    "sourceName": "Anchorage Chamber of Commerce",
+    "familyFriendly": true,
+    "id": "dc815798121e",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Anchorage Salmon Run",
@@ -68,7 +208,7 @@
     "sourceName": "Skinny Raven Sports",
     "familyFriendly": true,
     "id": "9758f26132d2",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Seward Sprint Triathlon",
@@ -82,7 +222,7 @@
     "sourceName": "Running in the USA",
     "familyFriendly": false,
     "id": "81e57a7a6ed7",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Spenard Farmers Market – Opening Day",
@@ -96,7 +236,49 @@
     "sourceName": "Spenard Farmers Market Facebook",
     "familyFriendly": true,
     "id": "96278e87ec97",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "35th Annual Anchorage Salmon Run (10K / 5K / 2K)",
+    "start": "2026-05-02T10:00:00-08:00",
+    "end": "2026-05-02T12:00:00-08:00",
+    "allDay": false,
+    "location": "Inlet View Elementary School, 815 L St, Anchorage",
+    "category": "fitness",
+    "description": "Annual fundraiser 10K, 5K, and 2K fun run starting at Inlet View Elementary and heading out along the Tony Knowles Coastal Trail. Race proceeds support educational programs at the school; a post-race carnival follows.",
+    "sourceUrl": "https://runsignup.com/Race/AK/Anchorage/AKSalmonRun",
+    "sourceName": "RunSignUp",
+    "familyFriendly": true,
+    "id": "a6671f242296",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Pink Cheeks Triathlon (5K Run / 10K Bike / 600-Yard Swim)",
+    "start": "2026-05-02T10:00:00-08:00",
+    "end": "2026-05-02T13:00:00-08:00",
+    "allDay": false,
+    "location": "Seward High School, 2100 Swetman St, Seward",
+    "category": "fitness",
+    "description": "Seward Parks & Recreation's annual sprint triathlon open to soloists (13+) and relay teams (8+). Course includes high school cross-country trails, city streets, and a pool swim; all skill levels welcome.",
+    "sourceUrl": "https://runsignup.com/Race/Events/AK/Seward/PinkCheeks",
+    "sourceName": "RunSignUp",
+    "familyFriendly": true,
+    "id": "cf65611acfc7",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Anchorage Cheney Lake Park Community Cleanup",
+    "start": "2026-05-02T10:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Cheney Lake Park, Anchorage",
+    "category": "major",
+    "description": "Community cleanup event at Cheney Lake Park organized by the Anchorage Park Foundation as part of the citywide spring cleanup effort.",
+    "sourceUrl": "https://anchorageparkfoundation.org/events/",
+    "sourceName": "Anchorage Park Foundation",
+    "familyFriendly": true,
+    "id": "b5e95f07d98c",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Cheney Lake Park Spring Cleanup",
@@ -110,7 +292,7 @@
     "sourceName": "Anchorage Park Foundation",
     "familyFriendly": true,
     "id": "b3a868c14ac4",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Community Fair at Chugiak Eagle River Senior Center",
@@ -124,7 +306,21 @@
     "sourceName": "Anchorage Chamber of Commerce",
     "familyFriendly": true,
     "id": "acae40383b3d",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "KPHA Spring Meeting at Pratt Museum",
+    "start": "2026-05-03T09:00:00-08:00",
+    "end": "2026-05-03T15:00:00-08:00",
+    "allDay": false,
+    "location": "Pratt Museum, Homer",
+    "category": "arts",
+    "description": "Kenai Peninsula Historical Association spring meeting at the Pratt Museum in Homer; doors open at 9 AM, meeting at 10 AM, potluck lunch at noon, and an afternoon program of local historical interest at 1 PM.",
+    "sourceUrl": "https://www.kenaipeninsulahistoricalassociation.org/events",
+    "sourceName": "Kenai Peninsula Historical Association",
+    "familyFriendly": true,
+    "id": "50c25f119a96",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Steps for Strong Minds 5K Run/Walk",
@@ -138,7 +334,21 @@
     "sourceName": "Skinny Raven Sports",
     "familyFriendly": true,
     "id": "bc97c3c985e6",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Spring Duathlon Series",
+    "start": "2026-05-05T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Anchorage",
+    "category": "fitness",
+    "description": "Multi-week spring duathlon series for adults and youth in Anchorage, with supersprint duathlon distances and a virtual participation option.",
+    "sourceUrl": "https://www.runningintheusa.com/race/list/anchorage-ak/upcoming",
+    "sourceName": "Running in the USA",
+    "familyFriendly": true,
+    "id": "86f1b87a3e8d",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Spring Duathlon Series – Race 1",
@@ -152,7 +362,7 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "c053f07fc434",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Kachemak Bay Shorebird Festival",
@@ -166,7 +376,49 @@
     "sourceName": "Kachemak Bay Shorebird Festival",
     "familyFriendly": true,
     "id": "0a8b30b8b4e5",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Dance Production — Alaska Center for the Performing Arts",
+    "start": "2026-05-08T00:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Alaska Center for the Performing Arts, 621 W 6th Ave, Anchorage",
+    "category": "arts",
+    "description": "A vibrant dance production celebrating the beauty of creativity found in everyday life, presented at the Alaska Center for the Performing Arts.",
+    "sourceUrl": "https://alaskapac.org/events/theatre",
+    "sourceName": "Alaska Center for the Performing Arts",
+    "familyFriendly": true,
+    "id": "6bc39ed087a7",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Anchorage Running Club Annual Matson Community Trail Cleanup",
+    "start": "2026-05-09T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Campbell Creek Trail / Peanut Farm area, Anchorage",
+    "category": "hiking",
+    "description": "Annual volunteer trail cleanup organized by the Anchorage Running Club on the trails behind the Peanut Farm along Campbell Creek.",
+    "sourceUrl": "https://www.facebook.com/RunAnchorage/",
+    "sourceName": "Anchorage Running Club / Facebook",
+    "familyFriendly": true,
+    "id": "444a5b84f15e",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Anchorage Waterways Creek Cleanup",
+    "start": "2026-05-09T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Chester Creek and area waterways, Anchorage",
+    "category": "hiking",
+    "description": "Annual Anchorage Waterways Council creek cleanup where volunteers in canoes, kayaks, and waders remove trash from local streams and waterways; multiple cleanup dates and locations throughout May.",
+    "sourceUrl": "https://www.mtnclubak.org/events",
+    "sourceName": "Mountaineering Club of Alaska",
+    "familyFriendly": true,
+    "id": "b9d37f748357",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Love a Nurse Run 5K",
@@ -180,7 +432,7 @@
     "sourceName": "Skinny Raven Sports",
     "familyFriendly": true,
     "id": "bb1fbda0ea1a",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Girls on the Run 5K",
@@ -194,7 +446,7 @@
     "sourceName": "Skinny Raven Sports",
     "familyFriendly": true,
     "id": "e69b91cbd8c4",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Annual Matson Community Cleanup – Anchorage Running Club",
@@ -208,7 +460,7 @@
     "sourceName": "Anchorage Running Club Facebook",
     "familyFriendly": true,
     "id": "a2ab1346af62",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Kinderlauf Family Fun Run",
@@ -222,7 +474,21 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "92b6983a28af",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Kinderlauf Family Fun Run (2K / 5K)",
+    "start": "2026-05-09T10:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "APU Moseley Sports Center, 4500 Diplomacy Dr, Anchorage",
+    "category": "fitness",
+    "description": "6th annual fun run hosted by Rilke Schule German Immersion School; 2K and 5K routes, costume-friendly, with medals for all finishing kids and a commemorative t-shirt. Proceeds support the school.",
+    "sourceUrl": "https://www.facebook.com/RilkeSchule",
+    "sourceName": "Rilke Schule / Facebook",
+    "familyFriendly": true,
+    "id": "4ce27f22ade1",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Roald Dahl's Matilda the Musical – Anchorage Community Theatre",
@@ -237,7 +503,35 @@
     "sourceName": "CenterTix",
     "familyFriendly": true,
     "id": "154ab8f82a44",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "ATLiens",
+    "start": "2026-05-09T20:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Williwaw Social, 609 F St, Anchorage",
+    "category": "music",
+    "description": "Live performance by electronic music duo ATLiens at Williwaw Social.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "1255353f24b3",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Jo Koy — Stand-Up Comedy",
+    "start": "2026-05-09T20:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Alaska Airlines Center, 3550 Providence Dr, Anchorage",
+    "category": "arts",
+    "description": "Stand-up comedy performance by comedian Jo Koy at Alaska Airlines Center. Event is 21+ unless accompanied by a parent or guardian.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "bedce4dcb727",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Jo Koy – Stand-Up Comedy",
@@ -252,7 +546,7 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "120266873010",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Bike to Work Week – Anchorage",
@@ -266,7 +560,7 @@
     "sourceName": "Bike Anchorage",
     "familyFriendly": true,
     "id": "2103ca709302",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Make it Monday Forum – America250: Alaska's Week of Dreams",
@@ -280,7 +574,7 @@
     "sourceName": "Anchorage Chamber of Commerce",
     "familyFriendly": false,
     "id": "40fe5ba65dd7",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Spring Duathlon Series – Race 2",
@@ -294,7 +588,21 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "4af83d181d98",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Arctic Marine Science: Sikuliaq to Shore — Exhibition Opening",
+    "start": "2026-05-15T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Anchorage Museum, 625 C St, Anchorage",
+    "category": "arts",
+    "description": "New exhibition opening May 15 where visitors step aboard a recreated section of the research vessel Sikuliaq to discover how science and scientists deepen understanding of the Arctic marine ecosystem.",
+    "sourceUrl": "https://www.anchoragemuseum.org/exhibitions/upcoming-exhibitions/",
+    "sourceName": "Anchorage Museum",
+    "familyFriendly": true,
+    "id": "fee56cc83db0",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Anchorage Bike to Work Day",
@@ -308,7 +616,21 @@
     "sourceName": "Bike Anchorage",
     "familyFriendly": true,
     "id": "7bc429499f84",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Chiodos",
+    "start": "2026-05-15T18:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Williwaw Social Outdoors, 609 F St, Anchorage",
+    "category": "music",
+    "description": "Outdoor concert by post-hardcore band Chiodos at Williwaw Social Outdoors, part of an outdoor summer concert block party on F Street.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "34d58bb2f383",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Chiodos – Rock Concert",
@@ -322,7 +644,7 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "0eba124d29e2",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Rock Emo Legends",
@@ -336,7 +658,63 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "7bc62aba2616",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "With Love and a Major Organ — Cyrano's Theatre Company",
+    "start": "2026-05-15T19:30:00-08:00",
+    "end": "2026-06-07T21:30:00-08:00",
+    "allDay": false,
+    "location": "Cyrano's Theatre Building, 3800 Debarr Rd, Anchorage",
+    "category": "arts",
+    "description": "Quirky modern-day fable described as romantic, funny, and wildly original — a unique exploration of love in the age of technology, directed by Gregg Brevoort. Runs May 15–June 7.",
+    "sourceUrl": "https://www.cyranos.org/plays",
+    "sourceName": "Cyrano's Theatre Company",
+    "familyFriendly": false,
+    "id": "71192d368c98",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Matson Ocean Education Center Grand Opening",
+    "start": "2026-05-16T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Alaska Wildlife Conservation Center, Mile 79 Seward Hwy, Portage",
+    "category": "major",
+    "description": "Grand opening of the new 1,000-square-foot Matson Ocean Education Center at AWCC, a classroom-style facility at the water's edge in Portage Valley offering hands-on education about Cook Inlet's marine ecosystem and endangered beluga whales.",
+    "sourceUrl": "https://www.anchorage.net/event/matson-ocean-education-center-grand-opening/48206/",
+    "sourceName": "Visit Anchorage",
+    "familyFriendly": true,
+    "id": "485ded35a0c2",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Law Enforcement Torch Run 5K",
+    "start": "2026-05-16T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Anchorage",
+    "category": "fitness",
+    "description": "Annual 5K run organized in support of Special Olympics Alaska, part of the national Law Enforcement Torch Run series.",
+    "sourceUrl": "https://www.runningintheusa.com/race/list/anchorage-ak/upcoming",
+    "sourceName": "Running in the USA",
+    "familyFriendly": true,
+    "id": "67a88350d3c9",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Spenard Farmers Market — Opening Saturday",
+    "start": "2026-05-16T09:00:00-08:00",
+    "end": "2026-05-16T14:00:00-08:00",
+    "allDay": false,
+    "location": "Under the Spenard Windmill (Koot's Parking Lot), 2555 Spenard Rd, Anchorage",
+    "category": "food",
+    "description": "Opening Saturday of the Spenard Farmers Market's 17th season; weekly market runs Saturdays 9 AM–2 PM through September featuring Alaska-grown produce, local food, crafts, and live music under the windmill.",
+    "sourceUrl": "https://www.anchorage.net/blog/post/anchorage-farmers-market-guide/",
+    "sourceName": "Visit Anchorage",
+    "familyFriendly": true,
+    "id": "d1ca8cc4c4b5",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Law Enforcement Torch Run – Soldotna",
@@ -350,7 +728,7 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "cd38999988e8",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Law Enforcement Torch Run – Anchorage",
@@ -364,7 +742,35 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "c1fbb06b8fbd",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Exit Glacier 5K & 10K Race",
+    "start": "2026-05-16T10:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Resurrection Roadhouse, 31752 Herman Leirer Rd, Seward",
+    "category": "fitness",
+    "description": "Seward Parks & Recreation's annual 5K and 10K road race starting at the Resurrection Roadhouse near Exit Glacier and following an out-and-back route. Same-day registration available.",
+    "sourceUrl": "https://runsignup.com/Race/AK/Seward/ExitGlacier5k10k",
+    "sourceName": "RunSignUp",
+    "familyFriendly": true,
+    "id": "dc5ec3df62e6",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Anchorage Market & Festival — Opening Weekend",
+    "start": "2026-05-16T10:00:00-08:00",
+    "end": "2026-05-17T17:00:00-08:00",
+    "allDay": false,
+    "location": "Anchorage Market, 225 E St, Anchorage",
+    "category": "food",
+    "description": "Opening weekend of downtown Anchorage's largest outdoor market; runs Saturdays 10 AM–6 PM and Sundays 11 AM–5 PM through mid-September with up to 300 vendors offering food, crafts, art, and live entertainment.",
+    "sourceUrl": "https://anchoragemarkets.com/anchorage-market/",
+    "sourceName": "Anchorage Markets & Events",
+    "familyFriendly": true,
+    "id": "17a0a12d719b",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Exit Glacier Race – 5K & 10K",
@@ -378,7 +784,7 @@
     "sourceName": "RunSignUp",
     "familyFriendly": true,
     "id": "d66a1e87dbb1",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Anchorage Market & Festival – Opening Weekend",
@@ -392,7 +798,7 @@
     "sourceName": "Anchorage Activities",
     "familyFriendly": true,
     "id": "60ed892395e9",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Janie Fricke & Moore & Moore – Country Concert",
@@ -406,7 +812,7 @@
     "sourceName": "Bandsintown",
     "familyFriendly": true,
     "id": "8574d22efb2d",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Gold Nugget Triathlon",
@@ -420,7 +826,35 @@
     "sourceName": "Gold Nugget Triathlon",
     "familyFriendly": false,
     "id": "2a724cb27a01",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Gold Nugget Triathlon (Women's)",
+    "start": "2026-05-17T09:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Bartlett High School, 1101 Golden Bear Dr, Anchorage",
+    "category": "fitness",
+    "description": "Alaska's premier all-women's sprint triathlon with 1,650 in-person participants; dedicated to improving the lives of women and girls through athletics. Mothers and daughters frequently train and compete together.",
+    "sourceUrl": "https://goldnuggettriathlon.com/",
+    "sourceName": "Gold Nugget Triathlon",
+    "familyFriendly": false,
+    "id": "4f137d36239a",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Shoreline Mafia",
+    "start": "2026-05-17T18:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Williwaw Social Outdoors, 609 F St, Anchorage",
+    "category": "music",
+    "description": "Outdoor concert by West Coast rap group Shoreline Mafia at Williwaw Social Outdoors.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "8611e0e84453",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Shoreline Mafia – Hip Hop Concert",
@@ -434,7 +868,21 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "31162de32c66",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Alaska Arbor Day Tree Planting",
+    "start": "2026-05-18T00:00:00-08:00",
+    "end": null,
+    "allDay": true,
+    "location": "Various parks, Anchorage",
+    "category": "major",
+    "description": "Volunteer event on Alaska Arbor Day to plant trees in Anchorage community parks; organized by the Anchorage Park Foundation.",
+    "sourceUrl": "https://anchorageparkfoundation.org/events/",
+    "sourceName": "Anchorage Park Foundation",
+    "familyFriendly": true,
+    "id": "c4aa01d72c4b",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Alaska Arbor Day Tree Planting",
@@ -448,7 +896,7 @@
     "sourceName": "Anchorage Park Foundation",
     "familyFriendly": true,
     "id": "19aa8f6dc6c4",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Alaska Arbor Day Community Events",
@@ -462,7 +910,21 @@
     "sourceName": "Anchorage Park Foundation",
     "familyFriendly": true,
     "id": "361c590427bd",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "SOJA — 1st Tap Outdoor Concert",
+    "start": "2026-05-21T18:00:00-08:00",
+    "end": "2026-05-21T21:30:00-08:00",
+    "allDay": false,
+    "location": "Moose's Tooth Pub & Pizzeria, 3300 Old Seward Hwy, Anchorage",
+    "category": "music",
+    "description": "Grammy Award-winning reggae band SOJA headlines the first outdoor concert of the season at the Moose's Tooth stage, with H3 opening. Ages 21+ event; doors at 6 PM.",
+    "sourceUrl": "https://www.eventbrite.com/e/1st-tap-soja-tickets-1983404098049",
+    "sourceName": "Eventbrite / Bear Tooth Theatrepub",
+    "familyFriendly": false,
+    "id": "2b466772b329",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "SOJA – Reggae Concert",
@@ -476,7 +938,7 @@
     "sourceName": "Songkick",
     "familyFriendly": false,
     "id": "44c63268cd54",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Cousin Curtiss – Live at Palmer Alehouse",
@@ -490,7 +952,7 @@
     "sourceName": "Bandsintown",
     "familyFriendly": false,
     "id": "267dde93e5ac",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Gunsight Mountain Music Festival 2026",
@@ -504,7 +966,7 @@
     "sourceName": "Songkick",
     "familyFriendly": true,
     "id": "e58a94dd94d1",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Cousin Curtiss – Live at Creekbend Cafe",
@@ -518,7 +980,7 @@
     "sourceName": "Bandsintown",
     "familyFriendly": false,
     "id": "8c6ba8ddc86a",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Trent Waldron Half Marathon & 10K",
@@ -532,7 +994,21 @@
     "sourceName": "Anchorage Running Club",
     "familyFriendly": true,
     "id": "5cca0b3adcc4",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "3 Rings Circus",
+    "start": "2026-05-23T12:00:00-08:00",
+    "end": "2026-05-24T15:00:00-08:00",
+    "allDay": false,
+    "location": "Sullivan Arena, 1600 Gambell St, Anchorage",
+    "category": "arts",
+    "description": "Modern American circus featuring aerial ballerinas, motorcycle high-wire acts, acrobats, clowns, and the Valencia Bros. 'Dueling Wheels of Death' across three stages. Multiple shows May 23–24; a portion of proceeds benefits Big Brothers Big Sisters of Alaska.",
+    "sourceUrl": "https://3ringscircus.com/",
+    "sourceName": "3 Rings Circus",
+    "familyFriendly": true,
+    "id": "35bcfdbe24e3",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "3 Rings Circus – Family Show",
@@ -546,7 +1022,21 @@
     "sourceName": "AllEvents.in",
     "familyFriendly": true,
     "id": "94f9eeb5fadc",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Sawyer Brown & Montgomery Gentry",
+    "start": "2026-05-23T20:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Alaska Airlines Center, 3550 Providence Dr, Anchorage",
+    "category": "music",
+    "description": "Live country music concert featuring Sawyer Brown and Montgomery Gentry at Alaska Airlines Center.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "220b85449d1f",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Sawyer Brown & Montgomery Gentry – Country Concert",
@@ -560,7 +1050,21 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": true,
     "id": "d599dbb65ef9",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Purity Ring",
+    "start": "2026-05-28T18:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Wendy Williamson Auditorium, UAA, 3211 Providence Dr, Anchorage",
+    "category": "music",
+    "description": "Live electronic music performance by Canadian dream-pop duo Purity Ring at Wendy Williamson Auditorium.",
+    "sourceUrl": "https://anchorage.events/this-weekend/",
+    "sourceName": "Anchorage Events",
+    "familyFriendly": false,
+    "id": "0dd8d31ee6b2",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Purity Ring – Electronic Music Concert",
@@ -574,7 +1078,49 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "eb8f60ab7640",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Eagle River Nature Center Public Nature Program",
+    "start": "2026-05-29T11:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Eagle River Nature Center, 32750 Eagle River Rd, Eagle River",
+    "category": "hiking",
+    "description": "Weekly guided nature program at the Eagle River Nature Center beginning May 29; programs explore the trails and natural features of the Chugach foothills for all ages.",
+    "sourceUrl": "https://www.ernc.org/public-programs",
+    "sourceName": "Eagle River Nature Center",
+    "familyFriendly": true,
+    "id": "495a3c20154c",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Little Explorers Toddler Hike — Eagle River Nature Center",
+    "start": "2026-05-29T11:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Eagle River Nature Center, 32750 Eagle River Rd, Eagle River",
+    "category": "hiking",
+    "description": "Recurring guided nature walk on the Rodak Trail at a toddler's pace, designed for babies and children up to age 6 with accompanying adults; no registration required, check in by 11 AM.",
+    "sourceUrl": "https://www.ernc.org/public-programs",
+    "sourceName": "Eagle River Nature Center",
+    "familyFriendly": true,
+    "id": "9059937ebc9e",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
+  },
+  {
+    "title": "Chase Matthew",
+    "start": "2026-05-29T18:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Sullivan Arena Parking Lot, 1600 Gambell St, Anchorage",
+    "category": "music",
+    "description": "Outdoor country music concert by Chase Matthew at the Sullivan Arena Parking Lot.",
+    "sourceUrl": "https://www.ericksonevents.com/category/upcoming-events/",
+    "sourceName": "Erickson Unlimited",
+    "familyFriendly": false,
+    "id": "a98f0f205ddc",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Chase Matthew – Country Concert",
@@ -588,7 +1134,21 @@
     "sourceName": "Songkick",
     "familyFriendly": true,
     "id": "e05476978280",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+  },
+  {
+    "title": "Twilight 12K & Skinny Mini 6K",
+    "start": "2026-05-29T19:00:00-08:00",
+    "end": "2026-05-29T21:30:00-08:00",
+    "allDay": false,
+    "location": "Skinny Raven Downtown, 800 H St, Anchorage",
+    "category": "fitness",
+    "description": "Skinny Raven Sports' signature Friday night running event with live bands along the course; routes traverse Government Hill, Downtown Anchorage, the Coastal Trail, and Westchester Lagoon. Post-race party at the Rose Garden on the Park Strip with Bear Tooth food and Broken Tooth beverages.",
+    "sourceUrl": "https://skinnyraven.com/events/twilight-12k/",
+    "sourceName": "Skinny Raven Sports",
+    "familyFriendly": true,
+    "id": "ac599fd41ebe",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Skinny Raven Twilight 12K & Skinny Mini 6K",
@@ -602,7 +1162,7 @@
     "sourceName": "Skinny Raven Sports",
     "familyFriendly": true,
     "id": "b58d1dcf3d59",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
     "title": "Golden Girls: The Laughs Continue",
@@ -611,13 +1171,27 @@
     "allDay": false,
     "location": "Atwood Concert Hall, 621 W 6th Avenue, Anchorage",
     "category": "arts",
-    "artsSub": "other",
     "description": "Touring comedy stage show based on the classic Golden Girls TV series, with multiple performances May 30–31 at the Atwood Concert Hall.",
     "sourceUrl": "https://anchorage.events/may/",
     "sourceName": "Anchorage Events",
     "familyFriendly": true,
     "id": "c2bc12f31144",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00",
+    "artsSub": "other"
+  },
+  {
+    "title": "Anchorage Tacos and Tequila Fest (21+ Event)",
+    "start": "2026-05-30T15:00:00-08:00",
+    "end": "2026-05-30T23:00:00-08:00",
+    "allDay": false,
+    "location": "Sullivan Arena Parking Lot, 1600 Gambell St, Anchorage",
+    "category": "food",
+    "description": "Outdoor festival featuring multiple taco vendors, tequila tastings, a frozen margarita station, Lucha Libre wrestling, a Chihuahua beauty pageant, and a concert headlined by Bone Thugs-N-Harmony, Mark McGrath of Sugar Ray, and Sugar Hill Gang. Ages 21+ event.",
+    "sourceUrl": "https://www.ericksonevents.com/tacos-and-tequila-fest-053026-anchorage/",
+    "sourceName": "Erickson Unlimited",
+    "familyFriendly": false,
+    "id": "5bbf7ddf7008",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Anchorage Tacos and Tequila Fest",
@@ -631,6 +1205,6 @@
     "sourceName": "Erickson Unlimited",
     "familyFriendly": false,
     "id": "e2ee568a6a40",
-    "firstSeen": "2026-04-27T03:22:52.813611+00:00"
+    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   }
 ]
