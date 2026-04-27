@@ -1,0 +1,18 @@
+# Netlify build configuration.
+#
+# Mirrors what's set in the Netlify UI, plus an `ignore` rule that fixes
+# the cross-directory dependency: events.json lives in the repo root but
+# is imported at build time by the React app under web/. Without this,
+# Netlify's default "did the base directory change?" check skips the
+# build whenever only events.json updates — which is exactly what the
+# weekly cron does.
+
+[build]
+  base    = "web"
+  command = "npm run build"
+  publish = "web/dist"
+
+  # Build only when something the site actually depends on changes.
+  # Returns 0 (skip) only if there are no changes in web/ or events.json
+  # since the last successful deploy. Otherwise builds.
+  ignore  = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- web/ events.json"
