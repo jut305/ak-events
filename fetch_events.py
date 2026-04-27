@@ -62,7 +62,10 @@ Alaska.org, anchorage.events, Eventbrite Alaska. Newspapers: Peninsula
 Clarion, Frontiersman, Homer News. Eventbrite specifically carries
 many cultural festivals, community fundraisers, and ethnic food
 festivals (Taste of Korea, Filipino festivals, Native Alaskan events,
-etc.) that don't appear elsewhere — search it thoroughly.
+etc.) that don't appear elsewhere — search it thoroughly. Also note:
+adn.com/events/<slug> URLs are valuable — they redirect to the
+organizer's own site, where you can verify event details and use the
+organizer URL as the source.
 
 Cultural and community festivals: this category is often missed.
 Search explicitly for cultural heritage festivals (Korean, Filipino,
