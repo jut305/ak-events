@@ -1,7 +1,9 @@
 import { Users } from "lucide-react";
 import type { ReactNode } from "react";
-import type { Category, FitnessSub, TimeRange } from "../types";
+import type { ArtsSub, Category, FitnessSub, TimeRange } from "../types";
 import {
+  ARTS_SUB_LABEL,
+  ARTS_SUB_ORDER,
   CATEGORY_META,
   CATEGORY_ORDER,
   FITNESS_SUB_LABEL,
@@ -12,13 +14,16 @@ import { Chip } from "./Chip";
 interface FilterBarProps {
   range: TimeRange;
   categories: Category[];
-  subs: FitnessSub[];
+  fitnessSubs: FitnessSub[];
+  artsSubs: ArtsSub[];
   family: boolean;
   onRangeChange: (r: TimeRange) => void;
   onToggleCategory: (c: Category) => void;
   onClearCategories: () => void;
-  onToggleSub: (s: FitnessSub) => void;
-  onClearSubs: () => void;
+  onToggleFitnessSub: (s: FitnessSub) => void;
+  onClearFitnessSubs: () => void;
+  onToggleArtsSub: (s: ArtsSub) => void;
+  onClearArtsSubs: () => void;
   onFamilyChange: (v: boolean) => void;
 }
 
@@ -44,18 +49,21 @@ function GroupLabel({ children }: { children: ReactNode }) {
 export function FilterBar({
   range,
   categories,
-  subs,
+  fitnessSubs,
+  artsSubs,
   family,
   onRangeChange,
   onToggleCategory,
   onClearCategories,
-  onToggleSub,
-  onClearSubs,
+  onToggleFitnessSub,
+  onClearFitnessSubs,
+  onToggleArtsSub,
+  onClearArtsSubs,
   onFamilyChange,
 }: FilterBarProps) {
   const allCategoriesActive = categories.length === 0;
   const fitnessActive = categories.includes("fitness");
-  const allSubsActive = subs.length === 0;
+  const artsActive = categories.includes("arts");
 
   return (
     <div className="px-5 pb-4 space-y-2">
@@ -93,16 +101,36 @@ export function FilterBar({
 
       {fitnessActive && (
         <div className="flex flex-wrap gap-1.5 pt-0.5">
-          <Chip selected={allSubsActive} onClick={onClearSubs}>
+          <Chip
+            selected={fitnessSubs.length === 0}
+            onClick={onClearFitnessSubs}
+          >
             All fitness
           </Chip>
           {FITNESS_SUB_ORDER.map((s) => (
             <Chip
               key={s}
-              selected={subs.includes(s)}
-              onClick={() => onToggleSub(s)}
+              selected={fitnessSubs.includes(s)}
+              onClick={() => onToggleFitnessSub(s)}
             >
               {FITNESS_SUB_LABEL[s]}
+            </Chip>
+          ))}
+        </div>
+      )}
+
+      {artsActive && (
+        <div className="flex flex-wrap gap-1.5 pt-0.5">
+          <Chip selected={artsSubs.length === 0} onClick={onClearArtsSubs}>
+            All arts
+          </Chip>
+          {ARTS_SUB_ORDER.map((s) => (
+            <Chip
+              key={s}
+              selected={artsSubs.includes(s)}
+              onClick={() => onToggleArtsSub(s)}
+            >
+              {ARTS_SUB_LABEL[s]}
             </Chip>
           ))}
         </div>

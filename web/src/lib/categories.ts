@@ -1,4 +1,4 @@
-import type { Category, FitnessSub } from "../types";
+import type { ArtsSub, Category, FitnessSub } from "../types";
 
 export const CATEGORY_ORDER: Category[] = [
   "fitness",
@@ -6,7 +6,6 @@ export const CATEGORY_ORDER: Category[] = [
   "food",
   "hiking",
   "arts",
-  "photography",
   "major",
 ];
 
@@ -39,17 +38,14 @@ export const CATEGORY_META: Record<
     color: "var(--color-cat-arts)",
     soft: "rgba(74, 110, 108, 0.12)",
   },
-  photography: {
-    label: "Photography",
-    color: "var(--color-cat-photography)",
-    soft: "rgba(107, 91, 115, 0.12)",
-  },
   major: {
     label: "Major",
     color: "var(--color-cat-major)",
     soft: "rgba(139, 58, 76, 0.10)",
   },
 };
+
+// ---------- Fitness subcategories ----------
 
 export const FITNESS_SUB_ORDER: FitnessSub[] = [
   "running",
@@ -72,8 +68,6 @@ export function classifyFitness(
   description: string
 ): FitnessSub {
   const text = `${title} ${description}`.toLowerCase();
-
-  // Order matters: triathlon before running because tris contain "run"
   if (/\b(triathlon|tri\b|duathlon)\b/.test(text)) return "triathlon";
   if (/\b(ski|fat bike|fatbike|skiing|nordic)\b/.test(text))
     return "ski-fat-bike";
@@ -85,5 +79,41 @@ export function classifyFitness(
     )
   )
     return "running";
+  return "other";
+}
+
+// ---------- Arts subcategories ----------
+
+export const ARTS_SUB_ORDER: ArtsSub[] = [
+  "visual",
+  "photography",
+  "theater",
+  "dance",
+  "other",
+];
+
+export const ARTS_SUB_LABEL: Record<ArtsSub, string> = {
+  visual: "Visual art",
+  photography: "Photography",
+  theater: "Theater",
+  dance: "Dance",
+  other: "Other",
+};
+
+export function classifyArts(title: string, description: string): ArtsSub {
+  const text = `${title} ${description}`.toLowerCase();
+  // Order matters — more specific before generic
+  if (/\b(photo|photograph|aurora photo)/.test(text)) return "photography";
+  if (/\b(theater|theatre|play\b|playhouse|musical|broadway|drama)/.test(text))
+    return "theater";
+  if (/\b(dance|ballet|recital|choreograph)/.test(text)) return "dance";
+  if (
+    /\b(gallery|museum|exhibition|exhibit|first friday|art opening|painting|sculpture|illustration|tlingit|native art)/.test(
+      text
+    )
+  )
+    return "visual";
+  if (/\b(comedy|comedian|stand[- ]?up|improv|reading|poet|literary|book|film|cinema|movie|screening)/.test(text))
+    return "other";
   return "other";
 }

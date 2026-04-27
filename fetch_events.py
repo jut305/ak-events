@@ -24,7 +24,7 @@ import anthropic
 EVENTS_FILE = Path(__file__).parent / "events.json"
 LOOKAHEAD_DAYS = 30
 MODEL = "claude-sonnet-4-6"  # update if a newer model is preferred
-MAX_TOKENS = 16000
+MAX_TOKENS = 24000
 
 # Alaska time (AKDT in summer, AKST in winter). For prompt clarity we just
 # say "Alaska time" and let the model emit the correct offset.
@@ -46,11 +46,11 @@ CATEGORIES OF INTEREST:
 - Live outdoor music: concerts, festivals, outdoor venues
 - Food events: festivals, farmers markets with special events, tastings,
   pop-ups, restaurant weeks
-- Photography (specifically): photo workshops, photography gallery
-  openings, photo walks, aurora photography events
-- Arts and culture: theater, dance, gallery openings (non-photo),
-  museum exhibitions, visual art shows, literary readings, film
-  screenings, comedy
+- Arts and culture: theater, dance, gallery openings, museum
+  exhibitions, visual art shows, photography (workshops, photo gallery
+  openings, photo walks, aurora photography events), literary
+  readings, film screenings, comedy. Use the artsSub field for
+  granularity.
 - Hiking: organized hikes, trail events, guided outings
 - Major significant events: anything notable that draws crowds —
   cultural festivals, fairs, civic events, fundraisers of scale
@@ -59,7 +59,17 @@ SEARCH STRATEGY — search by category, not just by aggregator. Use:
 
 General/major: Visit Anchorage, Anchorage Daily News calendar,
 Alaska.org, anchorage.events, Eventbrite Alaska. Newspapers: Peninsula
-Clarion, Frontiersman, Homer News.
+Clarion, Frontiersman, Homer News. Eventbrite specifically carries
+many cultural festivals, community fundraisers, and ethnic food
+festivals (Taste of Korea, Filipino festivals, Native Alaskan events,
+etc.) that don't appear elsewhere — search it thoroughly.
+
+Cultural and community festivals: this category is often missed.
+Search explicitly for cultural heritage festivals (Korean, Filipino,
+Hispanic/Latin, Native Alaskan, Russian, Greek, Indian), faith
+community events, neighborhood block parties, and church/temple
+festivals. These are typically tagged as 'major' or 'food' depending
+on emphasis.
 
 Music: Bear Tooth Theatrepub event calendar, 49th State Brewing,
 Williwaw, Moose's Tooth, Atwood Concert Hall, Alaska Center for the
@@ -80,9 +90,6 @@ Hiking: Mountaineering Club of Alaska (mtnclubak.org), Alaska Trails
 (alaska-trails.org), Eagle River Nature Center (ernc.org), Chugach
 State Park events, Kenai Mountains-Turnagain Arm National Heritage Area.
 
-Photography: Anchorage Museum, Alaska Geographic, local camera clubs,
-gallery openings, aurora photography workshops.
-
 Eagle River specifically: Eagle River Nature Center events, Eagle River
 Lions Club, Chugiak-Eagle River Chamber of Commerce, Birchwood events.
 
@@ -98,7 +105,8 @@ no markdown code fences. Each event must match this schema exactly:
   "end": "ISO 8601 datetime or null if unknown",
   "allDay": boolean,
   "location": "string — venue name, city",
-  "category": "one of: fitness | music | food | photography | arts | hiking | major",
+  "category": "one of: fitness | music | food | arts | hiking | major",
+  "artsSub": "ONLY if category is arts. One of: visual, photography, theater, dance, other. Omit otherwise.",
   "description": "string — 1-2 sentences, factual, no marketing language",
   "sourceUrl": "string — direct link to event page, not the homepage",
   "sourceName": "string — name of the source, e.g. 'Visit Anchorage'",
@@ -126,6 +134,10 @@ QUALITY RULES:
   use anchoragerunningclub.org/twghm, NOT allevents.in or
   anchorage.events. If only an aggregator carries the listing, accept
   it, but search for the primary source first.
+- Eventbrite IS acceptable when it's the canonical/only source for an
+  event (especially cultural festivals, community fundraisers,
+  workshops). Don't reflexively skip eventbrite.com URLs — many
+  legitimate community events are only listed there.
 - Always include a specific venue name in `location`, not just the
   city. "Anchorage" alone is not acceptable — find the actual venue.
 - Skip events with vague dates ("this summer", "TBD")
@@ -258,18 +270,20 @@ def call_claude(start_date: str, end_date: str) -> list[dict]:
         ak_tz=AK_TZ_LABEL,
     )
 
-    response = client.messages.create(
+    # Streaming is required for long-running requests (web search loop
+    # can exceed the SDK's 10-minute non-streaming timeout).
+    with client.messages.stream(
         model=MODEL,
         max_tokens=MAX_TOKENS,
         tools=[{
             "type": "web_search_20250305",
             "name": "web_search",
-            "max_uses": 40,
+            "max_uses": 25,
         }],
         messages=[{"role": "user", "content": prompt}],
-    )
+    ) as stream:
+        response = stream.get_final_message()
 
-    # Concatenate all text blocks from the final response
     text_parts = [
         block.text for block in response.content
         if getattr(block, "type", None) == "text"
@@ -277,9 +291,18 @@ def call_claude(start_date: str, end_date: str) -> list[dict]:
     full_text = "\n".join(text_parts)
 
     if not full_text.strip():
-        raise RuntimeError("empty response from Claude")
+        raise RuntimeError(
+            f"empty response from Claude (stop_reason={response.stop_reason})"
+        )
 
-    return extract_json_array(full_text)
+    try:
+        return extract_json_array(full_text)
+    except ValueError as e:
+        snippet = full_text[:500].replace("\n", " ")
+        raise RuntimeError(
+            f"{e} | stop_reason={response.stop_reason} | "
+            f"text starts: {snippet!r}"
+        )
 
 
 def validate_event(ev: dict) -> bool:
@@ -287,7 +310,7 @@ def validate_event(ev: dict) -> bool:
     required = ("title", "start", "category", "sourceUrl")
     if not all(ev.get(k) for k in required):
         return False
-    if ev["category"] not in {"fitness", "music", "food", "photography", "arts", "hiking", "major"}:
+    if ev["category"] not in {"fitness", "music", "food", "arts", "hiking", "major"}:
         return False
     if parse_event_start(ev) is None:
         return False

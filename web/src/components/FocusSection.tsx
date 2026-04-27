@@ -1,10 +1,12 @@
 import type {
   AppEvent,
+  ArtsSub,
   Category,
   FitnessSub,
   TimeRange,
 } from "../types";
 import {
+  ARTS_SUB_LABEL,
   CATEGORY_META,
   FITNESS_SUB_LABEL,
 } from "../lib/categories";
@@ -14,7 +16,8 @@ interface FocusSectionProps {
   events: AppEvent[];
   range: TimeRange;
   categories: Category[];
-  subs: FitnessSub[];
+  fitnessSubs: FitnessSub[];
+  artsSubs: ArtsSub[];
   family: boolean;
   onSelectEvent: (e: AppEvent) => void;
 }
@@ -35,19 +38,22 @@ function formatList(items: string[]): string {
 function focusTitle(
   range: TimeRange,
   categories: Category[],
-  subs: FitnessSub[],
+  fitnessSubs: FitnessSub[],
+  artsSubs: ArtsSub[],
   family: boolean
 ): string {
   const parts: string[] = [RANGE_LABEL[range]];
 
   if (categories.length > 0) {
-    const labels = categories.map((c) => CATEGORY_META[c].label);
-    parts.push(formatList(labels));
+    parts.push(formatList(categories.map((c) => CATEGORY_META[c].label)));
   }
 
-  if (categories.includes("fitness") && subs.length > 0) {
-    const subLabels = subs.map((s) => FITNESS_SUB_LABEL[s]);
-    parts.push(formatList(subLabels));
+  if (categories.includes("fitness") && fitnessSubs.length > 0) {
+    parts.push(formatList(fitnessSubs.map((s) => FITNESS_SUB_LABEL[s])));
+  }
+
+  if (categories.includes("arts") && artsSubs.length > 0) {
+    parts.push(formatList(artsSubs.map((s) => ARTS_SUB_LABEL[s])));
   }
 
   if (family) parts.push("Family");
@@ -59,11 +65,12 @@ export function FocusSection({
   events,
   range,
   categories,
-  subs,
+  fitnessSubs,
+  artsSubs,
   family,
   onSelectEvent,
 }: FocusSectionProps) {
-  const title = focusTitle(range, categories, subs, family);
+  const title = focusTitle(range, categories, fitnessSubs, artsSubs, family);
 
   return (
     <section className="px-5 pb-8">

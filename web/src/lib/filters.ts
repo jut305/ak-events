@@ -1,10 +1,17 @@
-import type { AppEvent, Category, FitnessSub, TimeRange } from "../types";
+import type {
+  AppEvent,
+  ArtsSub,
+  Category,
+  FitnessSub,
+  TimeRange,
+} from "../types";
 import { isInRange } from "./dates";
 
 export interface FilterState {
   range: TimeRange;
   categories: Category[]; // empty = all
-  subs: FitnessSub[]; // empty = all (only relevant when fitness is included)
+  fitnessSubs: FitnessSub[]; // empty = all (only relevant when fitness is included)
+  artsSubs: ArtsSub[]; // empty = all (only relevant when arts is included)
   family: boolean;
   query: string;
 }
@@ -12,7 +19,8 @@ export interface FilterState {
 export const DEFAULT_FILTERS: FilterState = {
   range: "weekend",
   categories: [],
-  subs: [],
+  fitnessSubs: [],
+  artsSubs: [],
   family: false,
   query: "",
 };
@@ -36,11 +44,19 @@ export function applyFilters(
     if (filters.categories.length > 0 && !filters.categories.includes(e.category))
       return false;
 
-    // Subcategory only narrows fitness events; non-fitness pass through.
+    // Subcategory only narrows events of the matching parent category.
     if (
       e.category === "fitness" &&
-      filters.subs.length > 0 &&
-      !(e.fitnessSub && filters.subs.includes(e.fitnessSub))
+      filters.fitnessSubs.length > 0 &&
+      !(e.fitnessSub && filters.fitnessSubs.includes(e.fitnessSub))
+    ) {
+      return false;
+    }
+
+    if (
+      e.category === "arts" &&
+      filters.artsSubs.length > 0 &&
+      !(e.artsSub && filters.artsSubs.includes(e.artsSub))
     ) {
       return false;
     }
@@ -53,10 +69,6 @@ export function applyFilters(
   });
 }
 
-/**
- * For the bottom "browse" section: always 30-day window, organized by
- * category. Search and family toggle apply, but time/category/sub do not.
- */
 export function browseEvents(
   events: AppEvent[],
   filters: FilterState,

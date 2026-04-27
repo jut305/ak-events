@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { loadEvents } from "./data/events";
 import { applyFilters, browseEvents } from "./lib/filters";
 import { useUrlFilters } from "./lib/url-state";
-import type { AppEvent, Category, FitnessSub } from "./types";
+import type { AppEvent, ArtsSub, Category, FitnessSub } from "./types";
 import { Header } from "./components/Header";
 import { FilterBar } from "./components/FilterBar";
 import { FocusSection } from "./components/FocusSection";
@@ -16,7 +16,6 @@ function toggleInList<T>(list: T[], value: T): T[] {
 }
 
 export default function App() {
-  // `now` is captured once per mount so date math is stable while user interacts
   const [now] = useState(() => new Date());
   const allEvents = useMemo(() => loadEvents(now), [now]);
 
@@ -43,24 +42,32 @@ export default function App() {
       <FilterBar
         range={filters.range}
         categories={filters.categories}
-        subs={filters.subs}
+        fitnessSubs={filters.fitnessSubs}
+        artsSubs={filters.artsSubs}
         family={filters.family}
         onRangeChange={(r) => setFilters({ range: r })}
         onToggleCategory={(c: Category) =>
           setFilters({ categories: toggleInList(filters.categories, c) })
         }
-        onClearCategories={() => setFilters({ categories: [], subs: [] })}
-        onToggleSub={(s: FitnessSub) =>
-          setFilters({ subs: toggleInList(filters.subs, s) })
+        onClearCategories={() =>
+          setFilters({ categories: [], fitnessSubs: [], artsSubs: [] })
         }
-        onClearSubs={() => setFilters({ subs: [] })}
+        onToggleFitnessSub={(s: FitnessSub) =>
+          setFilters({ fitnessSubs: toggleInList(filters.fitnessSubs, s) })
+        }
+        onClearFitnessSubs={() => setFilters({ fitnessSubs: [] })}
+        onToggleArtsSub={(s: ArtsSub) =>
+          setFilters({ artsSubs: toggleInList(filters.artsSubs, s) })
+        }
+        onClearArtsSubs={() => setFilters({ artsSubs: [] })}
         onFamilyChange={(v) => setFilters({ family: v })}
       />
       <FocusSection
         events={focusEvents}
         range={filters.range}
         categories={filters.categories}
-        subs={filters.subs}
+        fitnessSubs={filters.fitnessSubs}
+        artsSubs={filters.artsSubs}
         family={filters.family}
         onSelectEvent={setSelected}
       />
