@@ -24,7 +24,7 @@ import anthropic
 EVENTS_FILE = Path(__file__).parent / "events.json"
 LOOKAHEAD_DAYS = 30
 MODEL = "claude-sonnet-4-6"  # update if a newer model is preferred
-MAX_TOKENS = 8000
+MAX_TOKENS = 16000
 
 # Alaska time (AKDT in summer, AKST in winter). For prompt clarity we just
 # say "Alaska time" and let the model emit the correct offset.
@@ -69,9 +69,12 @@ Fitness: Skinny Raven Sports event calendar, Anchorage Running Club,
 MTA (Mat-Su Trails Association), Seward Parks & Recreation, RunSignUp
 Alaska, TriSignup Alaska, Alaska Bicycle Club.
 
-Food: Spenard Farmers Market, Anchorage Market & Festival, Bear Tooth
-event calendar (food-themed nights), Alaska Restaurant Week, local
-restaurant pop-ups and tasting events.
+Food: Spenard Farmers Market, Anchorage Market & Festival, South
+Anchorage Farmers Market, Center Market, Bear Tooth Theatrepub event
+calendar, 49th State Brewing events, Moose's Tooth events, Williwaw
+food events, Alaska Restaurant Week, Anchorage Cocktail Week, beer
+festivals, food truck rallies, brewery tasting events, restaurant
+pop-ups, wine dinners, charity dinners and benefit cookouts.
 
 Hiking: Mountaineering Club of Alaska (mtnclubak.org), Alaska Trails
 (alaska-trails.org), Eagle River Nature Center (ernc.org), Chugach
@@ -103,6 +106,21 @@ no markdown code fences. Each event must match this schema exactly:
 }}
 
 QUALITY RULES:
+- BE EXHAUSTIVE. Aim for 60-100 events total. Do not stop early. Use
+  your full search budget across every category and geographic area.
+  Your goal is to be the most complete events list for Southcentral
+  Alaska — not a curated short list.
+- EVERY category must have at least 5 events when possible. If a
+  category is thin, do additional category-specific searches before
+  returning. Specifically: food and arts often need extra searching
+  because their sources are scattered across venue calendars and
+  social media — dig harder there.
+- For RECURRING WEEKLY events (farmers markets, regular running club
+  runs, weekly trivia, etc.): include the FIRST upcoming occurrence
+  in the time window. Do not list every weekly occurrence separately,
+  but DO include each recurring event once so it shows up on the
+  calendar. The Spenard Farmers Market opening Saturday belongs in
+  the list; subsequent Saturdays do not.
 - Only include events you can verify with a source URL
 - STRONGLY prefer the organizer's own page over aggregators. Example:
   use anchoragerunningclub.org/twghm, NOT allevents.in or
@@ -116,14 +134,9 @@ QUALITY RULES:
 - Deduplicate aggressively: events with the same venue and the same
   start time are the same event, even if the title differs slightly.
   Pick one entry.
-- Skip recurring weekly things (regular farmers markets, weekly runs)
-  unless there is a special edition
 - If a real multi-day event spans 2-7 days, create one entry with
   start/end covering the full range
 - Use null for unknown fields, never guess
-- Aim for 25-40 high-quality events. All six categories should be
-  represented — if you have zero events in a category, search harder
-  for that category specifically before returning.
 
 Return the JSON array now."""
 
@@ -251,7 +264,7 @@ def call_claude(start_date: str, end_date: str) -> list[dict]:
         tools=[{
             "type": "web_search_20250305",
             "name": "web_search",
-            "max_uses": 20,
+            "max_uses": 40,
         }],
         messages=[{"role": "user", "content": prompt}],
     )
