@@ -28,6 +28,17 @@ export function EventDialog({ event, onClose }: EventDialogProps) {
     return () => dlg.removeEventListener("close", handleClose);
   }, [onClose]);
 
+  // Lock page scroll while the dialog is open so iOS doesn't show/hide
+  // the URL bar (which would resize the viewport and the dialog with it).
+  useEffect(() => {
+    if (!event) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [event]);
+
   // Click on backdrop closes (clicking the dialog itself is a child click)
   const onBackdropClick = (e: React.MouseEvent<HTMLDialogElement>) => {
     if (e.target === ref.current) ref.current?.close();
@@ -70,7 +81,10 @@ export function EventDialog({ event, onClose }: EventDialogProps) {
         </button>
       </div>
 
-      <div className="p-5 pt-4 overflow-y-auto space-y-4">
+      <div
+        className="p-5 pt-4 overflow-y-auto space-y-4"
+        style={{ overscrollBehavior: "contain" }}
+      >
         <div className="text-[0.875rem] text-ink-soft tabular-nums">
           {formatEventDateLine(event.startDate, event.endDate, event.allDay)}
         </div>

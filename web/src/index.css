@@ -96,8 +96,11 @@ dialog {
   max-width: 100%;
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: var(--shadow-pop);
-  max-height: 90dvh;
+  /* svh = small viewport height — uses the smallest possible viewport
+     so the dialog doesn't resize when iOS toggles the URL bar */
+  max-height: 90svh;
   overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 @media (min-width: 640px) {
@@ -105,7 +108,7 @@ dialog {
     margin: auto;
     max-width: 32rem;
     border-radius: 1rem;
-    max-height: 80dvh;
+    max-height: 80svh;
   }
 }
 
