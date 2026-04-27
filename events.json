@@ -14,20 +14,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Drag Me to the Movies: Wicked! — Bear Tooth Theatrepub",
-    "start": "2026-04-27T00:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Bear Tooth Theatrepub, 1230 W 27th Ave, Anchorage",
-    "category": "arts",
-    "description": "Local drag artists present a screening of the film Wicked with surprise performances throughout the movie in this ongoing series at Bear Tooth Theatrepub.",
-    "sourceUrl": "https://www.beartoothak.com/live-events",
-    "sourceName": "Bear Tooth Theatrepub",
-    "familyFriendly": false,
-    "id": "3f36748c4b22",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Side Stories (Last Podcast on the Left Live)",
     "start": "2026-04-27T00:00:00-08:00",
     "end": null,
@@ -81,34 +67,6 @@
     "sourceName": "Anchorage Museum",
     "familyFriendly": true,
     "id": "faccd6aa135c",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Michaela Goade: Song of the Seasons — Exhibition Opening",
-    "start": "2026-05-01T00:00:00-08:00",
-    "end": "2027-04-30T23:59:00-08:00",
-    "allDay": true,
-    "location": "Anchorage Museum, 625 C St, Anchorage",
-    "category": "arts",
-    "description": "New exhibition celebrating Alaska's seasons through the images, sketches, and process videos of Tlingit and Norwegian illustrator Michaela Goade, opening May 1.",
-    "sourceUrl": "https://www.anchoragemuseum.org/exhibitions/upcoming-exhibitions/",
-    "sourceName": "Anchorage Museum",
-    "familyFriendly": true,
-    "id": "0f89d5a41921",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "AK Grown: Childhood in Alaska — Exhibition Opening",
-    "start": "2026-05-01T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage Museum, 625 C St, Anchorage",
-    "category": "photography",
-    "description": "Exhibition tracing nearly a century of childhood in Alaska through photographs from the 1930s to the present, showing how the state's youngest residents view their world.",
-    "sourceUrl": "https://www.anchorage.net/blog/post/discover-whats-new-in-anchorage/",
-    "sourceName": "Visit Anchorage",
-    "familyFriendly": true,
-    "id": "49b7142a9d68",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
@@ -267,20 +225,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Anchorage Cheney Lake Park Community Cleanup",
-    "start": "2026-05-02T10:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Cheney Lake Park, Anchorage",
-    "category": "major",
-    "description": "Community cleanup event at Cheney Lake Park organized by the Anchorage Park Foundation as part of the citywide spring cleanup effort.",
-    "sourceUrl": "https://anchorageparkfoundation.org/events/",
-    "sourceName": "Anchorage Park Foundation",
-    "familyFriendly": true,
-    "id": "b5e95f07d98c",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Cheney Lake Park Spring Cleanup",
     "start": "2026-05-02T10:00:00-08:00",
     "end": "2026-05-02T13:00:00-08:00",
@@ -292,7 +236,7 @@
     "sourceName": "Anchorage Park Foundation",
     "familyFriendly": true,
     "id": "b3a868c14ac4",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Community Fair at Chugiak Eagle River Senior Center",
@@ -421,20 +365,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Love a Nurse Run 5K",
-    "start": "2026-05-09T09:00:00-08:00",
-    "end": "2026-05-09T12:00:00-08:00",
-    "allDay": false,
-    "location": "Kincaid Park, Anchorage",
-    "category": "fitness",
-    "description": "A 5K run and walk benefiting the Foundation for Alaska Nurses, celebrating National Nurses Week.",
-    "sourceUrl": "https://skinnyraven.com/events/other-supported-events/",
-    "sourceName": "Skinny Raven Sports",
-    "familyFriendly": true,
-    "id": "bb1fbda0ea1a",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
     "title": "Girls on the Run 5K",
     "start": "2026-05-09T09:00:00-08:00",
     "end": "2026-05-09T12:00:00-08:00",
@@ -460,20 +390,6 @@
     "sourceName": "Anchorage Running Club Facebook",
     "familyFriendly": true,
     "id": "a2ab1346af62",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Kinderlauf Family Fun Run",
-    "start": "2026-05-09T09:00:00-08:00",
-    "end": "2026-05-09T12:00:00-08:00",
-    "allDay": false,
-    "location": "Kincaid Park, Anchorage",
-    "category": "fitness",
-    "description": "A family-friendly 5K and 2K fun run with a dedicated kids' race component, designed for all ages and abilities.",
-    "sourceUrl": "https://www.runningintheusa.com/race/list/anchorage-ak/upcoming",
-    "sourceName": "Running in the USA",
-    "familyFriendly": true,
-    "id": "92b6983a28af",
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
@@ -1011,34 +927,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "3 Rings Circus – Family Show",
-    "start": "2026-05-23T12:00:00-08:00",
-    "end": "2026-05-24T18:00:00-08:00",
-    "allDay": false,
-    "location": "Sullivan Arena, 1600 Gambell Street, Anchorage",
-    "category": "major",
-    "description": "Family circus event at Sullivan Arena featuring acrobatics, clowns, and circus acts over two days, May 23–24.",
-    "sourceUrl": "https://allevents.in/anchorage/alaska",
-    "sourceName": "AllEvents.in",
-    "familyFriendly": true,
-    "id": "94f9eeb5fadc",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Sawyer Brown & Montgomery Gentry",
-    "start": "2026-05-23T20:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Alaska Airlines Center, 3550 Providence Dr, Anchorage",
-    "category": "music",
-    "description": "Live country music concert featuring Sawyer Brown and Montgomery Gentry at Alaska Airlines Center.",
-    "sourceUrl": "https://anchorage.events/this-weekend/",
-    "sourceName": "Anchorage Events",
-    "familyFriendly": false,
-    "id": "220b85449d1f",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Sawyer Brown & Montgomery Gentry – Country Concert",
     "start": "2026-05-23T20:00:00-08:00",
     "end": "2026-05-23T23:00:00-08:00",
@@ -1050,7 +938,7 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": true,
     "id": "d599dbb65ef9",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Purity Ring",
@@ -1064,34 +952,6 @@
     "sourceName": "Anchorage Events",
     "familyFriendly": false,
     "id": "0dd8d31ee6b2",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Purity Ring – Electronic Music Concert",
-    "start": "2026-05-28T18:00:00-08:00",
-    "end": "2026-05-28T21:00:00-08:00",
-    "allDay": false,
-    "location": "Wendy Williamson Auditorium, 2533 Providence Drive, Anchorage",
-    "category": "music",
-    "description": "Electronic pop duo Purity Ring performs live at the Wendy Williamson Auditorium on the UAA campus.",
-    "sourceUrl": "https://anchorage.events/may/",
-    "sourceName": "Anchorage Events",
-    "familyFriendly": false,
-    "id": "eb8f60ab7640",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Eagle River Nature Center Public Nature Program",
-    "start": "2026-05-29T11:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Eagle River Nature Center, 32750 Eagle River Rd, Eagle River",
-    "category": "hiking",
-    "description": "Weekly guided nature program at the Eagle River Nature Center beginning May 29; programs explore the trails and natural features of the Chugach foothills for all ages.",
-    "sourceUrl": "https://www.ernc.org/public-programs",
-    "sourceName": "Eagle River Nature Center",
-    "familyFriendly": true,
-    "id": "495a3c20154c",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
@@ -1192,19 +1052,5 @@
     "familyFriendly": false,
     "id": "5bbf7ddf7008",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Anchorage Tacos and Tequila Fest",
-    "start": "2026-05-30T15:00:00-08:00",
-    "end": "2026-05-30T23:00:00-08:00",
-    "allDay": false,
-    "location": "Sullivan Arena Parking Lot, 1600 Gambell Street, Anchorage",
-    "category": "food",
-    "description": "21+ outdoor festival featuring multiple taco vendors, tequila tastings, Lucha Libre wrestling, a Chihuahua beauty pageant, and a concert headlined by Bone Thugs-N-Harmony, Mark McGrath of Sugar Ray, Sugar Hill Gang, Furious 5, and DJ Skribble.",
-    "sourceUrl": "https://www.ericksonevents.com/tacos-and-tequila-fest-053026-anchorage/",
-    "sourceName": "Erickson Unlimited",
-    "familyFriendly": false,
-    "id": "e2ee568a6a40",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   }
 ]

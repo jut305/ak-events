@@ -208,14 +208,58 @@ def prune_past(events: list[dict]) -> list[dict]:
     return kept
 
 
+def venue_key(event: dict) -> str:
+    """A loose location key for fuzzy dedup. Lowercase, alphanumeric only."""
+    raw = (event.get("location") or "").lower()
+    return "".join(ch for ch in raw if ch.isalnum())[:24]
+
+
+def fuzzy_dedupe(events: list[dict]) -> list[dict]:
+    """
+    Collapse near-duplicates that the strict id-based dedup missed.
+
+    Two events are treated as the same event when they share both:
+      - the same start time (rounded to the hour), AND
+      - the same loose venue key (alphanumeric prefix of location)
+
+    This catches cases where the same concert appears on different
+    runs with slightly different titles ("Purity Ring" vs "Purity
+    Ring – Electronic Music Concert"). When duplicates are found,
+    keep the entry with the longer description as more informative,
+    and preserve the earlier firstSeen.
+    """
+    by_key: dict[tuple[str, str], dict] = {}
+    for ev in events:
+        dt = parse_event_start(ev)
+        if dt is None:
+            # Unparseable date: keep as-is, can't fuzzy-match
+            by_key[(ev.get("id", ""), "no-date")] = ev
+            continue
+        time_bucket = dt.strftime("%Y-%m-%dT%H")
+        key = (venue_key(ev), time_bucket)
+        existing = by_key.get(key)
+        if existing is None:
+            by_key[key] = ev
+        else:
+            # Keep entry with longer description; preserve earlier firstSeen
+            keep = ev if len(ev.get("description") or "") > len(existing.get("description") or "") else existing
+            other = existing if keep is ev else ev
+            keep_first = min(
+                keep.get("firstSeen", ""),
+                other.get("firstSeen", ""),
+            ) or keep.get("firstSeen") or other.get("firstSeen")
+            keep["firstSeen"] = keep_first
+            by_key[key] = keep
+    return list(by_key.values())
+
+
 def merge(existing: list[dict], fresh: list[dict]) -> list[dict]:
     """
     Merge fresh results into existing list.
 
-    - Dedup by event_id (title + start)
-    - Preserve firstSeen from existing entries
-    - Stamp firstSeen on new entries
-    - Newer fresh data wins on conflicting fields (description, location, etc.)
+    - First pass: dedup by event_id (title + start). Preserves firstSeen.
+    - Second pass: fuzzy dedup on (venue, start hour) so the same event
+      under different titles across runs collapses to one.
     """
     now_iso = datetime.now(timezone.utc).isoformat()
     by_id: dict[str, dict] = {}
@@ -229,16 +273,18 @@ def merge(existing: list[dict], fresh: list[dict]) -> list[dict]:
         eid = event_id(ev)
         ev["id"] = eid
         if eid in by_id:
-            # update fields, preserve firstSeen
             first_seen = by_id[eid].get("firstSeen", now_iso)
             by_id[eid] = {**by_id[eid], **ev, "firstSeen": first_seen}
         else:
             ev["firstSeen"] = now_iso
             by_id[eid] = ev
 
-    merged = list(by_id.values())
-    # sort by start ascending; unparseable goes to the end
-    merged.sort(key=lambda e: (parse_event_start(e) or datetime.max.replace(tzinfo=timezone.utc)))
+    merged = fuzzy_dedupe(list(by_id.values()))
+    merged.sort(
+        key=lambda e: (
+            parse_event_start(e) or datetime.max.replace(tzinfo=timezone.utc)
+        )
+    )
     return merged
 
 
