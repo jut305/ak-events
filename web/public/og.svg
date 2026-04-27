@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f8f4ec"/>
+
+  <text x="100" y="170" font-family="Helvetica, Arial, sans-serif" font-size="22" letter-spacing="6" font-weight="500" fill="#8a8175">
+    ANCHORAGE · MAT-SU · KENAI
+  </text>
+
+  <text x="100" y="305" font-family="Georgia, 'Times New Roman', serif" font-size="130" font-weight="700" fill="#1f1b16" letter-spacing="-3">
+    Around
+  </text>
+  <text x="100" y="440" font-family="Georgia, 'Times New Roman', serif" font-size="130" font-weight="400" font-style="italic" fill="#2d4a3e" letter-spacing="-3">
+    Anchorage
+  </text>
+
+  <line x1="100" y1="490" x2="540" y2="490" stroke="#d8cfbc" stroke-width="1.5"/>
+
+  <text x="100" y="540" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-style="italic" fill="#5a5246">
+    A weekly digest of events.
+  </text>
+
+  <text x="1100" y="540" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="18" letter-spacing="3" font-weight="500" fill="#8a8175">
+    AROUNDANCHORAGE.COM
+  </text>
+</svg>
