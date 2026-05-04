@@ -85,20 +85,6 @@
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
-    "title": "Kachemak Bay Shorebird Festival",
-    "start": "2026-05-06T09:00:00-08:00",
-    "end": "2026-05-10T14:00:00-08:00",
-    "allDay": false,
-    "location": "Alaska Maritime National Wildlife Refuge Visitor Center, Homer",
-    "category": "major",
-    "description": "Alaska's largest wildlife festival celebrating the spring shorebird migration, featuring guided birding trips, expert talks, workshops, boat tours, and children's activities for all skill levels. Over 100,000 shorebirds of 25+ species migrate through Kachemak Bay.",
-    "sourceUrl": "https://kachemakshorebird.org/",
-    "sourceName": "Kachemak Bay Shorebird Festival",
-    "familyFriendly": true,
-    "id": "9aab3fb4dddd",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
-  },
-  {
     "title": "Dance Production — Alaska Center for the Performing Arts",
     "start": "2026-05-08T00:00:00-08:00",
     "end": null,
@@ -413,21 +399,6 @@
     "firstSeen": "2026-05-04T15:58:51.850975+00:00"
   },
   {
-    "title": "Arctic Marine Science: Sikuliaq to Shore — Exhibition Opening",
-    "start": "2026-05-15T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage Museum, Anchorage",
-    "category": "arts",
-    "description": "New exhibition following the research vessel Sikuliaq into Arctic science in action. Opens May 15, 2026 at the Anchorage Museum.",
-    "sourceUrl": "https://www.anchorage.net/blog/post/discover-whats-new-in-anchorage/",
-    "sourceName": "Visit Anchorage",
-    "familyFriendly": true,
-    "id": "fee56cc83db0",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00",
-    "artsSub": "other"
-  },
-  {
     "title": "Anchorage Bike to Work Day Trail Ride",
     "start": "2026-05-15T07:00:00-08:00",
     "end": "2026-05-15T18:00:00-08:00",
@@ -454,7 +425,7 @@
     "sourceName": "Visit Anchorage",
     "familyFriendly": true,
     "id": "390dd2e2f449",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Chiodos – Outdoor Block Party (Williwaw Social Outdoors)",
@@ -482,20 +453,6 @@
     "sourceName": "Cyrano's Theatre Company",
     "familyFriendly": false,
     "id": "71192d368c98",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Matson Ocean Education Center Grand Opening",
-    "start": "2026-05-16T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Alaska Wildlife Conservation Center, Mile 79 Seward Hwy, Portage",
-    "category": "major",
-    "description": "Grand opening of the new Matson Ocean Education Center at the Alaska Wildlife Conservation Center, featuring interactive exhibits on Cook Inlet beluga whales, ocean ecosystems, and coastal habitats.",
-    "sourceUrl": "https://www.anchorage.net/event/matson-ocean-education-center-grand-opening/48206/",
-    "sourceName": "Visit Anchorage",
-    "familyFriendly": true,
-    "id": "485ded35a0c2",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
@@ -583,20 +540,6 @@
     "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
-    "title": "Exit Glacier Race 5K & 10K",
-    "start": "2026-05-16T09:00:00-08:00",
-    "end": "2026-05-16T12:00:00-08:00",
-    "allDay": false,
-    "location": "Resurrection Roadhouse, Herman Leirer Road, Seward",
-    "category": "fitness",
-    "description": "Seward Parks & Recreation hosts 5K and 10K races starting at the Resurrection Roadhouse near Exit Glacier, with an out-and-back scenic course.",
-    "sourceUrl": "https://racemob.com/running_events/alaska/discounted/5K",
-    "sourceName": "RaceMob",
-    "familyFriendly": true,
-    "id": "7e4a24ced70d",
-    "firstSeen": "2026-05-04T15:58:51.850975+00:00"
-  },
-  {
     "title": "South Anchorage Farmers Market — Season Opening",
     "start": "2026-05-16T09:00:00-08:00",
     "end": "2026-05-16T14:00:00-08:00",
@@ -609,6 +552,20 @@
     "familyFriendly": true,
     "id": "c5d757367782",
     "firstSeen": "2026-05-04T15:58:51.850975+00:00"
+  },
+  {
+    "title": "Matson Ocean Education Center Grand Opening",
+    "start": "2026-05-16T10:00:00-08:00",
+    "end": null,
+    "allDay": false,
+    "location": "Alaska Wildlife Conservation Center, Mile 79 Seward Hwy, Portage",
+    "category": "major",
+    "description": "Grand opening of the new Matson Ocean Education Center at the Alaska Wildlife Conservation Center, featuring interactive exhibits on Cook Inlet beluga whales, tides, ocean ecosystems, and a hydrophone for hearing underwater sounds.",
+    "sourceUrl": "https://www.anchorage.net/blog/post/discover-whats-new-in-anchorage/",
+    "sourceName": "Visit Anchorage",
+    "familyFriendly": true,
+    "id": "c607b8536585",
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Exit Glacier Race – 5K & 10K",
@@ -637,20 +594,6 @@
     "familyFriendly": true,
     "id": "60ed892395e9",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Matson Ocean Education Center Grand Opening",
-    "start": "2026-05-16T10:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Alaska Wildlife Conservation Center, Mile 79 Seward Hwy, Portage",
-    "category": "major",
-    "description": "Grand opening of the new Matson Ocean Education Center at the Alaska Wildlife Conservation Center, featuring interactive exhibits on Cook Inlet beluga whales, tides, ocean ecosystems, and a hydrophone for hearing underwater sounds.",
-    "sourceUrl": "https://www.anchorage.net/blog/post/discover-whats-new-in-anchorage/",
-    "sourceName": "Visit Anchorage",
-    "familyFriendly": true,
-    "id": "c607b8536585",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
     "title": "Celebrate Trails Day — Bike Ride",
@@ -706,34 +649,6 @@
     "sourceName": "Bandsintown",
     "familyFriendly": true,
     "id": "8574d22efb2d",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Gold Nugget Triathlon (Women's)",
-    "start": "2026-05-17T07:00:00-08:00",
-    "end": "2026-05-17T13:00:00-08:00",
-    "allDay": false,
-    "location": "Bartlett High School, 1101 N. Muldoon Road, Anchorage",
-    "category": "fitness",
-    "description": "All-women sprint triathlon with 1,650 participants dedicated to improving the lives of women and girls through athletics. Hosted at Bartlett High School.",
-    "sourceUrl": "https://goldnuggettriathlon.com/",
-    "sourceName": "Gold Nugget Triathlon",
-    "familyFriendly": false,
-    "id": "0b4bdfa81d64",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
-    "title": "Gold Nugget Triathlon",
-    "start": "2026-05-17T08:00:00-08:00",
-    "end": "2026-05-17T14:00:00-08:00",
-    "allDay": false,
-    "location": "Bartlett High School, 1101 Golden Bear Drive, Anchorage",
-    "category": "fitness",
-    "description": "Annual all-women sprint triathlon dedicated to improving the lives of women and girls through athletics, with 1,650 in-person participants plus a virtual option. USAT sanctioned.",
-    "sourceUrl": "https://goldnuggettriathlon.com/",
-    "sourceName": "Gold Nugget Triathlon",
-    "familyFriendly": false,
-    "id": "2a724cb27a01",
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
@@ -933,20 +848,6 @@
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
-    "title": "Gunsight Mountain Music Festival 2026",
-    "start": "2026-05-22T12:00:00-08:00",
-    "end": "2026-05-24T22:00:00-08:00",
-    "allDay": false,
-    "location": "Gunsight Mountain Lodge, Chickaloon, AK",
-    "category": "music",
-    "description": "Multi-day outdoor music festival at Gunsight Mountain Lodge in Chickaloon, headlined by Confederate Railroad.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "3913cd86b3d1",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
-  },
-  {
     "title": "Cousin Curtiss – Live at Creekbend Cafe",
     "start": "2026-05-22T19:00:00-08:00",
     "end": "2026-05-22T22:00:00-08:00",
@@ -1087,20 +988,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Anchorage Tacos and Tequila Fest",
-    "start": "2026-05-29T15:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Sullivan Arena Parking Lot, Anchorage",
-    "category": "food",
-    "description": "Outdoor food and music festival featuring tacos, tequila, and live performances by Bone Thugs-n-Harmony, Mack McGrath, and Sugar Hill Gang.",
-    "sourceUrl": "https://anchorage.events/this-weekend/",
-    "sourceName": "Anchorage Events",
-    "familyFriendly": false,
-    "id": "80adb9af0da2",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
     "title": "Chase Matthew — Music Night",
     "start": "2026-05-29T18:00:00-08:00",
     "end": "2026-05-29T22:00:00-08:00",
@@ -1212,21 +1099,6 @@
     "familyFriendly": true,
     "id": "39207bc97786",
     "firstSeen": "2026-05-04T15:58:51.850975+00:00"
-  },
-  {
-    "title": "Golden Girls: The Laughs Continue",
-    "start": "2026-05-31T14:00:00-08:00",
-    "end": "2026-05-31T16:30:00-08:00",
-    "allDay": false,
-    "location": "Atwood Concert Hall, 621 W 6th Avenue, Anchorage",
-    "category": "arts",
-    "artsSub": "theater",
-    "description": "Live theatrical comedy show celebrating the Golden Girls franchise, performed at Atwood Concert Hall.",
-    "sourceUrl": "https://anchorage.events/",
-    "sourceName": "anchorage.events",
-    "familyFriendly": true,
-    "id": "d59ade106295",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
     "title": "Soldotna Wednesday Market — Opening Day",

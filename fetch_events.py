@@ -223,6 +223,16 @@ def prune_past(events: list[dict]) -> list[dict]:
     return kept
 
 
+import re
+
+AGGREGATOR_HOSTS = (
+    "anchorage.events",
+    "allevents.in",
+    "songkick.com",
+    "alaska.org",
+)
+
+
 def _normalize_alphanum(s: str) -> str:
     return "".join(ch for ch in (s or "").lower() if ch.isalnum())
 
@@ -230,8 +240,7 @@ def _normalize_alphanum(s: str) -> str:
 def venue_first_word(event: dict) -> str:
     """First word of the location.
     'Sullivan Arena Parking Lot, 1600 Gambell St' and 'Sullivan Arena'
-    both yield 'sullivan' — so events at the same venue with differently
-    detailed addresses match."""
+    both yield 'sullivan'."""
     raw = (event.get("location") or "").split(",")[0].split()
     if not raw:
         return ""
@@ -243,10 +252,38 @@ def title_prefix(event: dict) -> str:
     return _normalize_alphanum(event.get("title") or "")[:16]
 
 
-def _collapse_pair(a: dict, b: dict) -> dict:
-    """When two entries are deemed the same event, keep the one with the
-    longer description; preserve the earlier firstSeen."""
-    keep = a if len(a.get("description") or "") > len(b.get("description") or "") else b
+def normalize_title_strict(title: str) -> str:
+    """Strip trailing parenthesized phrases like '(21+ Event)' and
+    normalize. Used for cross-date dedup."""
+    if not title:
+        return ""
+    cleaned = re.sub(r"\s*\([^)]*\)\s*$", "", title).strip().lower()
+    return _normalize_alphanum(cleaned)
+
+
+def is_aggregator_source(event: dict) -> bool:
+    url = (event.get("sourceUrl") or "").lower()
+    return any(host in url for host in AGGREGATOR_HOSTS)
+
+
+def _collapse_pair(a: dict, b: dict, prefer_organizer: bool = False) -> dict:
+    """Pick which of two duplicate entries to keep.
+
+    With prefer_organizer=True, an organizer URL beats an aggregator
+    URL even if the aggregator entry has a longer description.
+    Otherwise: longer description wins. Earliest firstSeen is preserved
+    either way.
+    """
+    if prefer_organizer:
+        a_agg = is_aggregator_source(a)
+        b_agg = is_aggregator_source(b)
+        if a_agg != b_agg:
+            keep = b if a_agg else a
+        else:
+            keep = a if len(a.get("description") or "") > len(b.get("description") or "") else b
+    else:
+        keep = a if len(a.get("description") or "") > len(b.get("description") or "") else b
+
     other = b if keep is a else a
     earliest = min(
         keep.get("firstSeen", ""),
@@ -258,30 +295,52 @@ def _collapse_pair(a: dict, b: dict) -> dict:
 
 def fuzzy_dedupe(events: list[dict]) -> list[dict]:
     """
-    Collapse near-duplicates that the strict id-based dedup missed.
+    Collapse near-duplicates the id-based dedup missed.
 
-    Two passes, both gated on same start hour:
-      1. (first-word-of-venue, start-hour) — catches identical events
-         where the location string has differing levels of detail.
-      2. (title-prefix, start-hour) — catches identical events where
-         the venue is written differently across runs.
+    Three passes:
+      1. (first-word-of-venue, start-hour)    — same venue same time, slight title differences
+      2. (title-prefix, start-hour)           — same time, similar title, possibly different venue spellings
+      3. (normalized-title, first-word-venue) — same title and venue across DIFFERENT dates (model
+                                                 uncertainty about which day). When collapsing,
+                                                 prefer the non-aggregator source — that one is more
+                                                 likely to have the right date.
     """
-    def collapse(items: list[dict], key_fn) -> list[dict]:
-        by_key: dict[tuple[str, str], dict] = {}
-        unkeyed: list[dict] = []
+    def collapse(items, key_fn, prefer_organizer=False):
+        by_key: dict = {}
+        unkeyed: list = []
         for ev in items:
-            dt = parse_event_start(ev)
             k = key_fn(ev)
-            if dt is None or not k:
+            if not k:
                 unkeyed.append(ev)
                 continue
-            full_key = (k, dt.strftime("%Y-%m-%dT%H"))
-            existing = by_key.get(full_key)
-            by_key[full_key] = _collapse_pair(existing, ev) if existing else ev
+            existing = by_key.get(k)
+            by_key[k] = _collapse_pair(existing, ev, prefer_organizer) if existing else ev
         return list(by_key.values()) + unkeyed
 
-    events = collapse(events, venue_first_word)
-    events = collapse(events, title_prefix)
+    def venue_hour(ev):
+        dt = parse_event_start(ev)
+        v = venue_first_word(ev)
+        if dt is None or not v:
+            return None
+        return (v, dt.strftime("%Y-%m-%dT%H"))
+
+    def title_hour(ev):
+        dt = parse_event_start(ev)
+        t = title_prefix(ev)
+        if dt is None or not t:
+            return None
+        return (t, dt.strftime("%Y-%m-%dT%H"))
+
+    def title_venue(ev):
+        t = normalize_title_strict(ev.get("title"))
+        v = venue_first_word(ev)
+        if not t or not v:
+            return None
+        return (t, v)
+
+    events = collapse(events, venue_hour)
+    events = collapse(events, title_hour)
+    events = collapse(events, title_venue, prefer_organizer=True)
     return events
 
 
