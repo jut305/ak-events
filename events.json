@@ -15,20 +15,6 @@
     "firstSeen": "2026-05-04T15:58:51.850975+00:00"
   },
   {
-    "title": "Spring Duathlon Series",
-    "start": "2026-05-05T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage",
-    "category": "fitness",
-    "description": "Multi-week spring duathlon series for adults and youth in Anchorage, with supersprint duathlon distances and a virtual participation option.",
-    "sourceUrl": "https://www.runningintheusa.com/race/list/anchorage-ak/upcoming",
-    "sourceName": "Running in the USA",
-    "familyFriendly": true,
-    "id": "86f1b87a3e8d",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Spring Duathlon Series – Race 1",
     "start": "2026-05-05T09:00:00-08:00",
     "end": "2026-05-05T12:00:00-08:00",
@@ -40,7 +26,7 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "c053f07fc434",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Eagle River Farmers Market – Season Opening",
@@ -85,20 +71,6 @@
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
-    "title": "Dance Production — Alaska Center for the Performing Arts",
-    "start": "2026-05-08T00:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Alaska Center for the Performing Arts, 621 W 6th Ave, Anchorage",
-    "category": "arts",
-    "description": "A vibrant dance production celebrating the beauty of creativity found in everyday life, presented at the Alaska Center for the Performing Arts.",
-    "sourceUrl": "https://alaskapac.org/events/theatre",
-    "sourceName": "Alaska Center for the Performing Arts",
-    "familyFriendly": true,
-    "id": "6bc39ed087a7",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Alaska Center for the Performing Arts – Dance Production (May 8)",
     "start": "2026-05-08T19:30:00-08:00",
     "end": null,
@@ -111,20 +83,6 @@
     "sourceName": "Alaska Center for the Performing Arts",
     "familyFriendly": true,
     "id": "744c1b710223",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
-  },
-  {
-    "title": "Anchorage Running Club Annual Matson Community Trail Cleanup",
-    "start": "2026-05-09T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Campbell Creek Trail / Peanut Farm area, Anchorage",
-    "category": "hiking",
-    "description": "Annual volunteer trail cleanup organized by the Anchorage Running Club on the trails behind the Peanut Farm along Campbell Creek.",
-    "sourceUrl": "https://www.facebook.com/RunAnchorage/",
-    "sourceName": "Anchorage Running Club / Facebook",
-    "familyFriendly": true,
-    "id": "444a5b84f15e",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
@@ -140,20 +98,6 @@
     "familyFriendly": true,
     "id": "b9d37f748357",
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Girls on the Run 5K",
-    "start": "2026-05-09T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage",
-    "category": "fitness",
-    "description": "Girls on the Run celebratory 5K focused on building confidence and community for youth participants. Supported by Skinny Raven Sports.",
-    "sourceUrl": "https://skinnyraven.com/events/other-supported-events/",
-    "sourceName": "Skinny Raven Sports",
-    "familyFriendly": true,
-    "id": "9b1edc7fd0bb",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
   },
   {
     "title": "Alaska Nurses' Love a Nurse 5K",
@@ -181,7 +125,7 @@
     "sourceName": "Anchorage Running Club Facebook",
     "familyFriendly": true,
     "id": "a2ab1346af62",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Girls on the Run Spring 5K Celebration",
@@ -195,7 +139,7 @@
     "sourceName": "AllEvents.in",
     "familyFriendly": true,
     "id": "c69c10e35669",
-    "firstSeen": "2026-05-04T15:58:51.850975+00:00"
+    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
   },
   {
     "title": "Kinderlauf Family Fun Run (2K / 5K)",
@@ -285,20 +229,6 @@
     "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
-    "title": "\"Make it Monday\" Forum — Celebrating America250: Alaska's Week of Dreams",
-    "start": "2026-05-11T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage Chamber of Commerce, Anchorage",
-    "category": "major",
-    "description": "Monthly 'Make it Monday' civic forum hosted by the Anchorage Chamber of Commerce, focusing on Alaska's role in America250 celebrations.",
-    "sourceUrl": "http://anchoragechamber.chambermaster.com/events/",
-    "sourceName": "Anchorage Chamber of Commerce",
-    "familyFriendly": false,
-    "id": "aafffa1e951a",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
     "title": "Bike to Work Week – Anchorage",
     "start": "2026-05-11T07:00:00-08:00",
     "end": "2026-05-15T18:00:00-08:00",
@@ -341,35 +271,6 @@
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
   },
   {
-    "title": "Community Cafe presented by Anchorage Concert Association",
-    "start": "2026-05-13T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage",
-    "category": "arts",
-    "artsSub": "other",
-    "description": "Civic arts and community gathering presented by the Anchorage Concert Association, listed on the Anchorage Chamber of Commerce calendar for May 13.",
-    "sourceUrl": "http://anchoragechamber.chambermaster.com/events/",
-    "sourceName": "Anchorage Chamber of Commerce",
-    "familyFriendly": true,
-    "id": "7d93d487b8d4",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
-    "title": "Get Moving Mat-Su Valley Dash 5K",
-    "start": "2026-05-13T09:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Wasilla, AK",
-    "category": "fitness",
-    "description": "Community 5K run/walk in Wasilla as part of the Get Moving initiative in the Mat-Su Valley.",
-    "sourceUrl": "https://www.findtherun.com/races/anchorage-ak",
-    "sourceName": "FindTheRun",
-    "familyFriendly": true,
-    "id": "18233f0cd630",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
-  },
-  {
     "title": "Anchorage Concert Association Community Cafe",
     "start": "2026-05-13T12:00:00-08:00",
     "end": "2026-05-13T13:00:00-08:00",
@@ -382,7 +283,7 @@
     "sourceName": "Anchorage Chamber of Commerce",
     "familyFriendly": true,
     "id": "b14e9eaa2772",
-    "firstSeen": "2026-05-04T15:58:51.850975+00:00"
+    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
   },
   {
     "title": "Get Moving Mat-Su Valley Dash",
@@ -396,7 +297,7 @@
     "sourceName": "FindTheRun",
     "familyFriendly": true,
     "id": "de5f813c6d48",
-    "firstSeen": "2026-05-04T15:58:51.850975+00:00"
+    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
     "title": "Anchorage Bike to Work Day Trail Ride",
@@ -456,34 +357,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Law Enforcement Torch Run 5K",
-    "start": "2026-05-16T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Anchorage",
-    "category": "fitness",
-    "description": "Annual 5K run organized in support of Special Olympics Alaska, part of the national Law Enforcement Torch Run series.",
-    "sourceUrl": "https://www.runningintheusa.com/race/list/anchorage-ak/upcoming",
-    "sourceName": "Running in the USA",
-    "familyFriendly": true,
-    "id": "67a88350d3c9",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Janie Fricke — Live Concert",
-    "start": "2026-05-16T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "William A. Egan Civic and Convention Center, Anchorage",
-    "category": "music",
-    "description": "Country music legend Janie Fricke performs live at the William A. Egan Civic and Convention Center in Anchorage.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "eabba6aba225",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
     "title": "Spenard Farmers Market — Opening Saturday",
     "start": "2026-05-16T09:00:00-08:00",
     "end": "2026-05-16T14:00:00-08:00",
@@ -509,7 +382,7 @@
     "sourceName": "Running in the USA",
     "familyFriendly": true,
     "id": "c1fbb06b8fbd",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Seward 5K & 10K Road Race",
@@ -624,20 +497,6 @@
     "firstSeen": "2026-05-04T15:58:51.850975+00:00"
   },
   {
-    "title": "Janie Fricke — Country Music Concert",
-    "start": "2026-05-16T18:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "William A. Egan Civic and Convention Center, Anchorage",
-    "category": "music",
-    "description": "Country music vocalist Janie Fricke performs live at the William A. Egan Civic and Convention Center.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "a2afa9a89587",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
-  },
-  {
     "title": "Janie Fricke & Moore & Moore – Country Concert",
     "start": "2026-05-16T19:30:00-08:00",
     "end": "2026-05-16T22:00:00-08:00",
@@ -681,20 +540,6 @@
   },
   {
     "title": "Alaska Arbor Day Tree Planting",
-    "start": "2026-05-18T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Various locations, Anchorage",
-    "category": "major",
-    "description": "Alaska Arbor Day volunteer community tree planting event organized by the Anchorage Park Foundation.",
-    "sourceUrl": "https://anchorageparkfoundation.org/events/",
-    "sourceName": "Anchorage Park Foundation",
-    "familyFriendly": true,
-    "id": "c4aa01d72c4b",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
-    "title": "Alaska Arbor Day Tree Planting",
     "start": "2026-05-18T09:00:00-08:00",
     "end": "2026-05-18T12:00:00-08:00",
     "allDay": false,
@@ -705,35 +550,7 @@
     "sourceName": "Anchorage Park Foundation",
     "familyFriendly": true,
     "id": "19aa8f6dc6c4",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Alaska Arbor Day Community Events",
-    "start": "2026-05-18T09:00:00-08:00",
-    "end": "2026-05-18T13:00:00-08:00",
-    "allDay": false,
-    "location": "Various parks, Anchorage",
-    "category": "major",
-    "description": "Alaska Arbor Day volunteer event to plant trees across Anchorage in partnership with the Anchorage Park Foundation.",
-    "sourceUrl": "https://anchorageparkfoundation.org/events/",
-    "sourceName": "Anchorage Park Foundation",
-    "familyFriendly": true,
-    "id": "361c590427bd",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "SOJA — Live Concert",
-    "start": "2026-05-21T00:00:00-08:00",
-    "end": null,
-    "allDay": true,
-    "location": "Moose's Tooth Pub & Pizzeria, Anchorage",
-    "category": "music",
-    "description": "Reggae band SOJA performs at Moose's Tooth Pub & Pizzeria in Anchorage.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "5a4826f4b6f2",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Shoreline Mafia — Outdoor Concert",
@@ -778,20 +595,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "SOJA – Reggae Concert",
-    "start": "2026-05-21T19:00:00-08:00",
-    "end": "2026-05-21T23:00:00-08:00",
-    "allDay": false,
-    "location": "Moose's Tooth Pub & Pizzeria, Anchorage",
-    "category": "music",
-    "description": "Live reggae concert by SOJA (Soldiers of Jah Army) at Moose's Tooth Pub & Pizzeria in Anchorage.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage/may-2026",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "44c63268cd54",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
     "title": "Cousin Curtiss – Live at Palmer Alehouse",
     "start": "2026-05-21T19:00:00-08:00",
     "end": "2026-05-21T22:00:00-08:00",
@@ -804,20 +607,6 @@
     "familyFriendly": false,
     "id": "267dde93e5ac",
     "firstSeen": "2026-04-27T03:32:46.448338+00:00"
-  },
-  {
-    "title": "Gunsight Mountain Music Fest 2026",
-    "start": "2026-05-22T00:00:00-08:00",
-    "end": "2026-05-24T23:00:00-08:00",
-    "allDay": false,
-    "location": "Gunsight Mountain Lodge, Chickaloon",
-    "category": "music",
-    "description": "Multi-day outdoor music festival at Gunsight Mountain Lodge in Chickaloon featuring Confederate Railroad and other acts over Memorial Day weekend.",
-    "sourceUrl": "https://www.songkick.com/metro-areas/14689-us-anchorage",
-    "sourceName": "Songkick",
-    "familyFriendly": false,
-    "id": "750cd962c68d",
-    "firstSeen": "2026-04-27T15:46:01.232812+00:00"
   },
   {
     "title": "Kenai Peninsula Birding Festival — Float Trip Day",
@@ -873,20 +662,6 @@
     "sourceName": "Songkick",
     "familyFriendly": false,
     "id": "a25940a45ce7",
-    "firstSeen": "2026-04-27T04:04:25.080567+00:00"
-  },
-  {
-    "title": "Trent Waldron Half Marathon & 10K",
-    "start": "2026-05-23T08:00:00-08:00",
-    "end": null,
-    "allDay": false,
-    "location": "Anchorage (Kincaid Park area), Anchorage",
-    "category": "fitness",
-    "description": "Annual half marathon and 10K trail race organized by the Anchorage Running Club, honoring Trent Waldron. Registration open via RunSignUp.",
-    "sourceUrl": "https://anchoragerunningclub.org/",
-    "sourceName": "Anchorage Running Club",
-    "familyFriendly": true,
-    "id": "01135b6e7d9e",
     "firstSeen": "2026-04-27T04:04:25.080567+00:00"
   },
   {
@@ -988,20 +763,6 @@
     "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
-    "title": "Chase Matthew — Music Night",
-    "start": "2026-05-29T18:00:00-08:00",
-    "end": "2026-05-29T22:00:00-08:00",
-    "allDay": false,
-    "location": "Sullivan Arena Parking Lot, 1600 Gambell Street, Anchorage",
-    "category": "music",
-    "description": "Country music artist Chase Matthew performs an outdoor concert at the Sullivan Arena parking lot to kick off Memorial Day weekend.",
-    "sourceUrl": "https://www.ericksonevents.com/category/upcoming-events/",
-    "sourceName": "Erickson Unlimited",
-    "familyFriendly": true,
-    "id": "5bbc046bc12e",
-    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
-  },
-  {
     "title": "Chase Matthew – Country Concert",
     "start": "2026-05-29T18:00:00-08:00",
     "end": "2026-05-29T22:00:00-08:00",
@@ -1013,7 +774,7 @@
     "sourceName": "Songkick",
     "familyFriendly": true,
     "id": "e05476978280",
-    "firstSeen": "2026-04-27T03:32:46.448338+00:00"
+    "firstSeen": "2026-04-27T03:00:19.089323+00:00"
   },
   {
     "title": "Skinny Raven Twilight 12K & Skinny Mini 6K",

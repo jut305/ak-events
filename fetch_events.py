@@ -344,6 +344,113 @@ def fuzzy_dedupe(events: list[dict]) -> list[dict]:
     return events
 
 
+def llm_dedupe(events: list[dict]) -> list[dict]:
+    """
+    Final dedupe pass: hand the event list to Claude (no tools) and have
+    it identify duplicates that the heuristic passes can't catch.
+
+    Heuristics fail on cases like:
+      - Identical titles same date but different reported hours / venues
+        (model uncertainty about specifics)
+      - 'Fest' vs 'Festival' or other minor title variations
+      - Midnight placeholder time vs actual hour for same event
+      - Same event under entirely different headline phrasing
+
+    The model is told to KEEP genuinely-distinct events (multi-day races,
+    same artist different venues different days, etc).
+
+    Cost: ~$0.02-0.05 per run. No web search.
+    Falls through (returns input unchanged) if API key missing or
+    response unparseable — never blocks the pipeline.
+    """
+    if len(events) < 2:
+        return events
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return events
+
+    summary_lines = []
+    for i, e in enumerate(events):
+        loc = (e.get("location") or "").replace("\n", " ")[:80]
+        title = (e.get("title") or "")[:100]
+        src = (e.get("sourceUrl") or "")[:100]
+        summary_lines.append(
+            f"[{i}] {title!r} | start={e.get('start','')} | venue={loc!r} | src={src}"
+        )
+
+    prompt = (
+        "You're deduplicating a list of upcoming events. Some are duplicates "
+        "of each other: the same real-world event appearing under slightly "
+        "different titles, with different start times (often a midnight "
+        "placeholder vs the actual hour), or with venue/source variations "
+        "across runs.\n\n"
+        "For each duplicate group, return:\n"
+        "  - 'keep': index of the entry to keep. Prefer entries with: a "
+        "specific time over midnight (00:00); an organizer URL over an "
+        "aggregator URL (anchorage.events, allevents.in, songkick.com, "
+        "bandsintown, runningintheusa, findtherun); more complete location "
+        "info.\n"
+        "  - 'remove': list of indices to remove.\n\n"
+        "These are NOT duplicates — keep all of them:\n"
+        "  - Multi-day races with separate entries per day (Race 1, Race 2)\n"
+        "  - Same artist performing on different days at different venues\n"
+        "  - Different events at the same venue at different times\n"
+        "  - Repeating monthly events with separate dated entries\n\n"
+        "Events:\n" + "\n".join(summary_lines) + "\n\n"
+        "Return JSON only, no prose:\n"
+        '{"groups": [{"keep": <int>, "remove": [<int>, ...]}, ...]}\n'
+    )
+
+    try:
+        client = anthropic.Anthropic(api_key=api_key)
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=4000,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        text = "".join(
+            b.text for b in response.content if getattr(b, "type", None) == "text"
+        )
+        start = text.find("{")
+        if start == -1:
+            return events
+        # raw_decode parses the first valid JSON value and ignores any
+        # trailing text the model may have added.
+        result, _ = json.JSONDecoder().raw_decode(text[start:])
+        groups = result.get("groups", [])
+    except Exception as exc:
+        print(f"warn: llm_dedupe failed: {exc}", file=sys.stderr)
+        return events
+
+    to_remove: set[int] = set()
+    for g in groups:
+        keep = g.get("keep")
+        if not isinstance(keep, int) or not (0 <= keep < len(events)):
+            continue
+        keep_ev = events[keep]
+        for rem in g.get("remove", []):
+            if (
+                isinstance(rem, int)
+                and 0 <= rem < len(events)
+                and rem != keep
+            ):
+                to_remove.add(rem)
+                # Preserve earliest firstSeen on the kept entry
+                other = events[rem]
+                earliest = min(
+                    keep_ev.get("firstSeen", "") or "",
+                    other.get("firstSeen", "") or "",
+                ) or keep_ev.get("firstSeen") or other.get("firstSeen")
+                keep_ev["firstSeen"] = earliest
+
+    if to_remove:
+        kept = [e for i, e in enumerate(events) if i not in to_remove]
+        print(f"LLM dedupe: removed {len(to_remove)} duplicates")
+        return kept
+    return events
+
+
 def merge(existing: list[dict], fresh: list[dict]) -> list[dict]:
     """
     Merge fresh results into existing list.
@@ -490,8 +597,10 @@ def main() -> int:
         print(f"Pruned {pruned_count} past events")
 
     merged = merge(pruned, valid)
+    pre_llm = len(merged)
+    merged = llm_dedupe(merged)
     new_count = len(merged) - len(pruned)
-    print(f"Final count: {len(merged)} ({new_count} new)")
+    print(f"Final count: {len(merged)} ({new_count} new, {pre_llm - len(merged)} llm-deduped)")
 
     EVENTS_FILE.write_text(json.dumps(merged, indent=2, ensure_ascii=False))
     print(f"Wrote {EVENTS_FILE}")
