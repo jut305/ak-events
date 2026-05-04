@@ -184,80 +184,105 @@ def load_existing() -> list[dict]:
         return []
 
 
-def parse_event_start(event: dict) -> datetime | None:
-    """Parse the start field into an aware datetime, or None if unparseable."""
-    raw = event.get("start")
+def _parse_iso(raw):
     if not raw:
         return None
     try:
-        # fromisoformat handles 'YYYY-MM-DDTHH:MM:SS±HH:MM' in 3.11+
         dt = datetime.fromisoformat(raw)
         if dt.tzinfo is None:
-            # Treat naive timestamps as Alaska time, but prune logic below
-            # only needs a rough comparison so UTC is fine as fallback.
             dt = dt.replace(tzinfo=timezone.utc)
         return dt
     except ValueError:
         return None
 
 
+def parse_event_start(event: dict) -> datetime | None:
+    return _parse_iso(event.get("start"))
+
+
+def parse_event_end(event: dict) -> datetime | None:
+    return _parse_iso(event.get("end"))
+
+
 def prune_past(events: list[dict]) -> list[dict]:
-    """Drop events whose start is before today (in UTC, generous)."""
+    """
+    Drop events whose latest relevant moment is before now.
+
+    For multi-day events (e.g. a festival running May 1 — May 30) we
+    use the END date so the event stays on the calendar through the
+    last day. Single-day events fall back to the start.
+    """
     cutoff = datetime.now(timezone.utc) - timedelta(hours=12)
     kept = []
     for ev in events:
-        dt = parse_event_start(ev)
-        if dt is None:
-            # If we can't parse it, keep it — better than silently losing data
+        relevant = parse_event_end(ev) or parse_event_start(ev)
+        if relevant is None:
             kept.append(ev)
-        elif dt >= cutoff:
+        elif relevant >= cutoff:
             kept.append(ev)
     return kept
 
 
-def venue_key(event: dict) -> str:
-    """A loose location key for fuzzy dedup. Lowercase, alphanumeric only."""
-    raw = (event.get("location") or "").lower()
-    return "".join(ch for ch in raw if ch.isalnum())[:24]
+def _normalize_alphanum(s: str) -> str:
+    return "".join(ch for ch in (s or "").lower() if ch.isalnum())
+
+
+def venue_first_word(event: dict) -> str:
+    """First word of the location.
+    'Sullivan Arena Parking Lot, 1600 Gambell St' and 'Sullivan Arena'
+    both yield 'sullivan' — so events at the same venue with differently
+    detailed addresses match."""
+    raw = (event.get("location") or "").split(",")[0].split()
+    if not raw:
+        return ""
+    return _normalize_alphanum(raw[0])[:16]
+
+
+def title_prefix(event: dict) -> str:
+    """First ~16 alphanumeric chars of the title, lowercased."""
+    return _normalize_alphanum(event.get("title") or "")[:16]
+
+
+def _collapse_pair(a: dict, b: dict) -> dict:
+    """When two entries are deemed the same event, keep the one with the
+    longer description; preserve the earlier firstSeen."""
+    keep = a if len(a.get("description") or "") > len(b.get("description") or "") else b
+    other = b if keep is a else a
+    earliest = min(
+        keep.get("firstSeen", ""),
+        other.get("firstSeen", ""),
+    ) or keep.get("firstSeen") or other.get("firstSeen")
+    keep["firstSeen"] = earliest
+    return keep
 
 
 def fuzzy_dedupe(events: list[dict]) -> list[dict]:
     """
     Collapse near-duplicates that the strict id-based dedup missed.
 
-    Two events are treated as the same event when they share both:
-      - the same start time (rounded to the hour), AND
-      - the same loose venue key (alphanumeric prefix of location)
-
-    This catches cases where the same concert appears on different
-    runs with slightly different titles ("Purity Ring" vs "Purity
-    Ring – Electronic Music Concert"). When duplicates are found,
-    keep the entry with the longer description as more informative,
-    and preserve the earlier firstSeen.
+    Two passes, both gated on same start hour:
+      1. (first-word-of-venue, start-hour) — catches identical events
+         where the location string has differing levels of detail.
+      2. (title-prefix, start-hour) — catches identical events where
+         the venue is written differently across runs.
     """
-    by_key: dict[tuple[str, str], dict] = {}
-    for ev in events:
-        dt = parse_event_start(ev)
-        if dt is None:
-            # Unparseable date: keep as-is, can't fuzzy-match
-            by_key[(ev.get("id", ""), "no-date")] = ev
-            continue
-        time_bucket = dt.strftime("%Y-%m-%dT%H")
-        key = (venue_key(ev), time_bucket)
-        existing = by_key.get(key)
-        if existing is None:
-            by_key[key] = ev
-        else:
-            # Keep entry with longer description; preserve earlier firstSeen
-            keep = ev if len(ev.get("description") or "") > len(existing.get("description") or "") else existing
-            other = existing if keep is ev else ev
-            keep_first = min(
-                keep.get("firstSeen", ""),
-                other.get("firstSeen", ""),
-            ) or keep.get("firstSeen") or other.get("firstSeen")
-            keep["firstSeen"] = keep_first
-            by_key[key] = keep
-    return list(by_key.values())
+    def collapse(items: list[dict], key_fn) -> list[dict]:
+        by_key: dict[tuple[str, str], dict] = {}
+        unkeyed: list[dict] = []
+        for ev in items:
+            dt = parse_event_start(ev)
+            k = key_fn(ev)
+            if dt is None or not k:
+                unkeyed.append(ev)
+                continue
+            full_key = (k, dt.strftime("%Y-%m-%dT%H"))
+            existing = by_key.get(full_key)
+            by_key[full_key] = _collapse_pair(existing, ev) if existing else ev
+        return list(by_key.values()) + unkeyed
+
+    events = collapse(events, venue_first_word)
+    events = collapse(events, title_prefix)
+    return events
 
 
 def merge(existing: list[dict], fresh: list[dict]) -> list[dict]:
